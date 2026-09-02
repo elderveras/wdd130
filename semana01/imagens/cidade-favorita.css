@@ -1,0 +1,9 @@
+div {
+  max-width: 800px; /* Mesma largura definida no width da sua imagem */
+  margin: 0 auto; /* Centraliza o bloco na página */
+}
+
+img {
+  max-width: 100%; /* Garante que a imagem se ajuste se a tela for menor */
+  height: auto;
+}
