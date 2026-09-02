@@ -1,9 +1,17 @@
-div {
-  max-width: 800px; /* Mesma largura definida no width da sua imagem */
-  margin: 0 auto; /* Centraliza o bloco na página */
+.container {
+  width: 800px; /* Força a caixa do container a ter exatamente 800px */
+  max-width: 100%; /* Garante responsividade em telas menores */
+  margin: 0 auto; /* Centraliza todo o bloco na tela */
 }
 
-img {
-  max-width: 100%; /* Garante que a imagem se ajuste se a tela for menor */
+.container img {
+  width: 100%; /* Faz a imagem preencher os 800px do container */
   height: auto;
+  display: block;
+}
+
+.container p,
+.container h1 {
+  width: 100%; /* Força o título e os parágrafos a respeitarem a largura de 800px */
+  box-sizing: border-box;
 }
