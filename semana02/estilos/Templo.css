@@ -32,12 +32,19 @@ h1 {
 
 picture {
   display: block;
-  margin-bottom: auto;
+  margin-bottom: 30px;
 }
 
 img {
   width: 600px;
   height: auto;
+}
+
+section {
+  background-color: #d9d9d9;
+  margin: 0 0 30px 0;
+  padding-block-end: 30px;
+  line-height: 1.5rem;
 }
 
 section p {
