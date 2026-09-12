@@ -17,7 +17,7 @@ footer {
 }
 
 header {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 main {
@@ -28,4 +28,24 @@ main {
 h1 {
   text-align: center;
   margin: 15px 0;
+}
+
+picture {
+  display: block;
+  margin-bottom: auto;
+}
+
+img {
+  width: 600px;
+  height: auto;
+}
+
+section p {
+  margin-bottom: 5px;
+}
+
+section h2 {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
 }
