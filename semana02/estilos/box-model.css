@@ -1,13 +1,19 @@
 .callout {
-	background-color: rgb(43, 43, 129);
+	width: max-content;
+    margin: 10;
+    border: 0;
+    background-color: rgb(43, 43, 129);
     padding: 20px;
     color: bisque;
 }
 
 .callout img {
-    color: blanchedalmond;
-	display: block;
-    padding: 100px;
+    position: left;
+    margin: 10;
+    border: 10;
+    background-color: blanchedalmond;
+    padding: 100;
+    height: 10;
 }
 
 blockquote {
@@ -17,6 +23,7 @@ blockquote {
 cite {
 	display: block;
     border: 10 20;
+    padding: 3px;
     text-align: 10;
     size of font: 5;
 }
