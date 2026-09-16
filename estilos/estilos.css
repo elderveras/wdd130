@@ -27,20 +27,21 @@ h1 {
 }
 
 main img {
-  width: 150px;
+  width: 100px;
   height: auto;
   border: 2px solid rgb(41, 92, 139);
-  padding: 2px;
+  padding: 5px;
   box-shadow: 0 0 30 px rgb(156, 155, 155);
 }
 
 p {
-  padding: 0;
+  padding: 10px;
+  margin: 10px;
 }
 
 aside {
-  width: 20rem;
-  margin: 1em;
+  width: 30rem;
+  margin: 10em;
   border: 2px solid rgba(0, 0, 0, 0.2);
   padding: 2em;
   background-color: rgb(245, 238, 209);
@@ -49,7 +50,11 @@ aside {
 }
 
 aside img {
-  margin-top: 2em;
+  margin-top: 10em;
   border-top: 1px solid black;
+  text-align: center;
+}
+
+footer p {
   text-align: center;
 }
