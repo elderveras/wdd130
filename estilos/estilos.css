@@ -16,7 +16,7 @@ nav {
 }
 
 nav a {
-  color: rgb(165, 173, 40);
+  color: rgb(213, 216, 50);
   display: block;
   padding: 10px;
 }
@@ -24,7 +24,7 @@ nav a {
 main {
   max-width: 800px;
   margin: 10px;
-  padding: 0 20px;
+  padding: 0 22px;
 }
 
 h1 {
@@ -37,10 +37,10 @@ main img {
   height: auto;
   border: 2px solid rgb(41, 92, 139);
   padding: 2px;
-  box-shadow: 0 0 15px rgb(156, 155, 155);
+  box-shadow: 0 0 15px rgb(128, 127, 127);
   margin-bottom: 15px;
   display: block;
-  margin: 15px 2px 20px 1px;
+  margin: 15px 2px 20px 0px;
 }
 
 p {
@@ -81,9 +81,8 @@ footer {
 }
 
 footer p {
-  color: rgb(165, 173, 40);
+  color: rgb(213, 216, 50);
   text-align: center;
   background-color: #034f7a;
   padding: 10px 0;
-  border-top: 1.5px solid #034f7a;
 }
