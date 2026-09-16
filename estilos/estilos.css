@@ -40,6 +40,7 @@ main img {
   box-shadow: 0 0 15px rgb(156, 155, 155);
   margin-bottom: 15px;
   display: block;
+  margin: 0;
 }
 
 p {
@@ -49,7 +50,7 @@ p {
 
 aside {
   width: 100%;
-  max-width: 280px;
+  max-width: 320px;
   margin: 10px 0;
   padding: 15px;
   height: auto;
@@ -66,13 +67,14 @@ h2 {
 }
 
 aside img {
-  width: 900% !important;
-  max-width: 1000% !important;
+  width: 10% !important;
+  max-width: 10% !important;
   height: auto !important;
   display: block !important;
   margin: 10px auto !important;
   border: none;
   box-shadow: none;
+  margin: 0;
 }
 
 footer {
