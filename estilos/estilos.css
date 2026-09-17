@@ -4,19 +4,28 @@
   box-sizing: border-box;
 }
 
+:root {
+  /* Criação de variáveis. */
+  --cor-de-fundo: rgb(41, 92, 139);
+  --cor-letras-botao: rgb(213, 216, 50);
+  --cor-barckgroud: white;
+  --margin-botton1: 15px;
+  --marggin-botton2: 10px;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1;
   color: #381c1c;
-  background: #fff;
+  background: var(--cor-barckgroud);
 }
 
 nav {
-  background-color: rgb(41, 92, 139);
+  background-color: var(--cor-de-fundo);
 }
 
 nav a {
-  color: rgb(213, 216, 50);
+  color: var(--cor-letras-botao);
   display: block;
   padding: 10px;
 }
@@ -28,23 +37,23 @@ main {
 }
 
 h1 {
-  color: rgb(41, 92, 139);
-  margin-bottom: 15px;
+  color: var(--cor-de-fundo);
+  margin-bottom: var(--margin-botton1);
 }
 
 main img {
   width: 150px;
   height: auto;
-  border: 2px solid rgb(41, 92, 139);
+  border: 2px solid var(--cor-de-fundo);
   padding: 2px;
   box-shadow: 0 0 15px rgb(128, 127, 127);
-  margin-bottom: 15px;
+  margin-bottom: var(--margin-botton1);
   display: block;
   margin: 5px 2px 20px 0px;
 }
 
 p {
-  margin-bottom: 10px;
+  margin-bottom: var(--marggin-botton2);
   padding: 10px 0 10px 0;
 }
 
@@ -63,7 +72,7 @@ aside {
 
 h2 {
   font-size: 1.2rem;
-  margin-bottom: 10px;
+  margin-bottom: var(--marggin-botton2);
 }
 
 aside img {
@@ -81,7 +90,7 @@ footer {
 }
 
 footer p {
-  color: rgb(213, 216, 50);
+  color: var(--cor-letras-botao);
   text-align: center;
   background-color: #034f7a;
   padding: 10px 0;
