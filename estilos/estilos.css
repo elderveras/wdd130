@@ -77,13 +77,17 @@ aside {
   margin-top: 2rem;
 }
 
+ul {
+  text-align: left;
+}
+
 h2 {
   font-size: 1.5rem;
   margin-bottom: var(--marggin-botton2);
 }
 
 aside img {
-  width: 30%;
+  width: 95%;
   max-width: 100% !important;
   height: auto !important;
   display: block !important;
@@ -93,8 +97,13 @@ aside img {
 }
 
 footer {
-  width: 100%;
-  max-width: 40%;
+  width: 41.2% !important;
+  max-width: 50% !important;
+  margin-top: 0 !important;
+  margin-bottom: 0;
+  margin-left: o !important;
+  box-sizing: border-box !important;
+  position: relative !important;
 }
 
 footer p {
