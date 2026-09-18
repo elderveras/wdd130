@@ -31,7 +31,7 @@ nav a {
 }
 
 main {
-  max-width: 800px;
+  max-width: 600px;
   margin: 5px;
   padding: 0 5px;
 }
@@ -39,6 +39,7 @@ main {
 h1 {
   color: var(--cor-de-fundo);
   margin-bottom: var(--margin-botton1);
+  text-align: center;
 }
 
 main img {
@@ -50,6 +51,7 @@ main img {
   margin-bottom: var(--margin-botton1);
   display: block;
   margin: 5px 2px 20px 0px;
+  float: right;
 }
 
 p {
@@ -94,4 +96,13 @@ footer p {
   text-align: center;
   background-color: #034f7a;
   padding: 10px 0;
+}
+
+/* Seletor de classe */
+.caixa {
+  margin: 1rem;
+  border: 1px solid rgb(0, 0, 0 / 100%);
+  padding: 1rem;
+  background-color: none;
+  color: black;
 }
