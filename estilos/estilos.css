@@ -22,6 +22,8 @@ body {
 
 nav {
   background-color: var(--cor-de-fundo);
+  max-width: 42%;
+  width: 40.5%;
 }
 
 nav a {
