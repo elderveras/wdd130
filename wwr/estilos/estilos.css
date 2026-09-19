@@ -1,0 +1,80 @@
+/* Cores e fontes do site */
+:root {
+  --cor-primaria: #055a05;
+  --cor-secundaria: #f4a261;
+  --cor-destaque1: #264653;
+  --cor-destaque2: #e9c46a;
+  --fonte-titulo: "Times New Roman", "Georgia", serif;
+  --fonte-body: Arial, Helvetica, sans-serif;
+}
+
+/* Reset basico das margens */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo geral do corpo da pagina */
+body {
+  font-family: var(--fonte-body);
+  color: var(--cor-destaque1);
+}
+
+/* Centralizando e limitando o tamanho da pagina */
+header,
+main,
+footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+/* Estilo dos titulos */
+h1,
+h2 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-primaria);
+  text-align: center;
+}
+
+/* Espacamento simples para blocos de texto e seções */
+nav,
+p,
+section,
+article {
+  margin: 16px;
+  padding: 8px;
+}
+
+/* Removendo sublinhado dos links das redes sociais */
+.redes-sociais a {
+  text-decoration: none;
+}
+
+/* Estilos da seção Hero (imagem com texto por cima) */
+.hero {
+  position: relative;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.7;
+  background-color: var(--cor-destaque1);
+  color: #ffffff;
+}
+
+/* Imagem dentro do artigo na seção hero */
+.hero article img {
+  float: right;
+  width: 125px;
+}
