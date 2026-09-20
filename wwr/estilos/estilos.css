@@ -22,12 +22,10 @@ body {
 }
 
 /* Centralizando e limitando o tamanho da pagina */
-header,
-main,
-footer {
-  width: 840px;
-  margin: 0 auto;
+header img {
 }
+
+main,
 
 /* Estilo dos titulos */
 h1,
@@ -77,4 +75,19 @@ article {
 .hero article img {
   float: right;
   width: 125px;
+}
+
+footer {
+  width: 600px;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer img {
+  width: 30px;
+  max-width: 30px;
+  height: auto;
+  margin: 0 10px;
+  border: none;
 }
