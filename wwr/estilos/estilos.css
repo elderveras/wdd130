@@ -1,3 +1,5 @@
+/* 1. CONFIGURAÇÕES GERAIS, VARIÁVEIS E RESET (HEAD / GLOBAL)*/
+
 /* Cores e fontes do site */
 :root {
   --cor-primaria: #055a05;
@@ -8,14 +10,21 @@
   --fonte-body: Arial, Helvetica, sans-serif;
 }
 
-/* Reset basico das margens */
+/* Reset básico das margens */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Centralizando e limitando o tamanho da pagina */
+/* Estilo geral do corpo da página */
+body {
+  font-family: var(--fonte-body);
+  color: var(--cor-destaque1);
+}
+
+/* 2. CABEÇALHO E NAVEGAÇÃO (HEADER & NAV) */
+
 header img {
   display: block;
   width: 30%;
@@ -27,15 +36,15 @@ header img {
   mix-blend-mode: screen;
 }
 
-/* Estilo geral do corpo da pagina */
-body {
-  font-family: var(--fonte-body);
-  color: var(--cor-destaque1);
+nav {
+  /* Espaçamento/estilos de navegação */
 }
 
 ul {
   padding: 20px;
 }
+
+/* 3. CONTEÚDO PRINCIPAL (BODY / MAIN / DIV / SECTIONS / PARÁGRAFOS)*/
 
 main div img {
   display: block;
@@ -47,17 +56,43 @@ main div img {
   height: auto;
 }
 
-/* Estilo dos titulos */
+h2 {
+  font-family: var(--fonte-titulo);
+  color: #264653;
+  text-align: center;
+  padding: 10px;
+}
+
 p {
   width: 100%;
+  padding: 20px;
   margin-left: 20px;
   font-family: var(--fonte-titulo);
   color: #055a05;
   text-align: left;
+}
+
+section {
+  /* Espaçamento simples para seções */
+}
+
+article {
+  margin: 10px;
   padding: 10px;
 }
 
-/* Estilos da seção Hero (imagem com texto por cima) */
+article img,
+main article img {
+  display: block;
+  float: none;
+  width: 800px;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+}
+
+/* 4. COMPONENTE HERO (SEÇÃO ESPECÍFICA DA MAIN)*/
+
 .hero {
   width: 100%;
   position: relative;
@@ -75,7 +110,7 @@ p {
   box-sizing: border-box;
   height: auto;
   filter: contrast(150%);
-  mix-blend-mode: screen;
+  /* mix-blend-mode removido para que o texto e a barra fiquem visíveis sem distorção */
 }
 
 .hero h1 {
@@ -87,19 +122,16 @@ p {
   box-sizing: border-box;
   padding: 15px;
   text-align: center;
-  opacity: 0.8;
-  background-color: var(--cor-destaque1);
-  color: #f4a261;
   margin: 0;
-  mix-blend-mode: normal;
-}
 
-/* Imagem dentro do artigo na seção hero */
-.hero article img {
-  float: right;
-  width: 125px;
-  height: auto;
-  margin-left: 10px;
+  /* APENAS a cor de fundo azul tem 70% de opacidade (rgba) */
+  background-color: rgba(38, 70, 83, 0.7);
+
+  /* As letras ficam 100% SÓLIDAS na cor laranja suave */
+  color: #f4a261;
+  font-family: var(--fonte-titulo);
+
+  mix-blend-mode: normal;
 }
 
 .hero article {
@@ -110,40 +142,15 @@ p {
   padding: 10px;
 }
 
-article img,
-main article img {
-  display: block;
-  float: none;
-  width: 800px;
-  max-width: 100%;
+.hero article img {
+  float: right;
+  width: 125px;
   height: auto;
-  margin: 20px auto;
+  margin-left: 10px;
 }
 
-h2 {
-  font-family: var(--fonte-titulo);
-  color: #264653;
-  text-align: center;
-  padding: 10px;
-}
+/*5. RODAPÉ E MÍDIAS SOCIAIS (FOOTER)*/
 
-/* Espacamento simples para blocos de texto e seções */
-nav {
-}
-
-p {
-  padding: 20px;
-}
-
-section {
-}
-
-article {
-  margin: 10px;
-  padding: 10px;
-}
-
-/* Removendo sublinhado dos links das redes sociais */
 .redes-sociais a {
   text-decoration: none;
 }
