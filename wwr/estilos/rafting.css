@@ -69,10 +69,6 @@ p {
   width: 100%;
 }
 
-.hero article img {
-  float: right;
-}
-
 /* Imagem principal do hero ocupando 100% da largura */
 .hero img {
   display: block;
