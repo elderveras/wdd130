@@ -1,18 +1,21 @@
+/* Reset basico das margens e caixa */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Variaveis globais de cores e espacamentos */
 :root {
   /* Criação de variáveis. */
   --cor-de-fundo: rgb(41, 92, 139);
   --cor-letras-botao: rgb(213, 216, 50);
   --cor-barckgroud: white;
-  --margin-botton1: 15px;
+  --margin-botton1: 10px;
   --marggin-botton2: 10px;
 }
 
+/* Estilo geral do corpo */
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1;
@@ -20,10 +23,12 @@ body {
   background: var(--cor-barckgroud);
 }
 
+/* Menu de navegacao */
 nav {
   background-color: var(--cor-de-fundo);
   max-width: 42%;
   width: 40.5%;
+  padding: 15px 25px;
 }
 
 nav a {
@@ -32,6 +37,7 @@ nav a {
   padding: 10px;
 }
 
+/* Conteudo principal */
 main {
   max-width: 40%;
   margin: 5px;
@@ -41,8 +47,8 @@ main {
 h1 {
   color: var(--cor-de-fundo);
   margin-bottom: var(--margin-botton1);
-  text-align: center;
-  margin: 20px;
+  text-align: left;
+  margin: 10px 0;
 }
 
 main img {
@@ -50,37 +56,12 @@ main img {
   height: auto;
   border: 2px solid var(--cor-de-fundo);
   padding: 2px;
-  box-shadow: 0 0 15px rgb(128, 127, 127);
-  margin-bottom: var(--margin-botton1);
-  display: block;
-  margin: 5px 2px 20px 0px;
+  box-shadow: 0 0 30px rgb(128, 127, 127);
   float: right;
 }
 
 p {
-  margin-bottom: 2rem;
-  padding: 10px 0 10px 0;
-  text-align: left;
-  margin: 10px;
-}
-
-aside {
-  width: 100%;
-  max-width: 40%;
-  margin: 10px 0 25px 10px;
-  padding: 15px;
-  height: auto;
-  display: block;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  background-color: rgb(245, 238, 209);
-  color: #221111;
-  text-align: center;
-  clear: both;
-  margin-top: 2rem;
-}
-
-ul {
-  text-align: left;
+  padding: 0;
 }
 
 h2 {
@@ -88,24 +69,54 @@ h2 {
   margin-bottom: var(--marggin-botton2);
 }
 
+/* Conteudo lateral (aside) e imagem */
 aside img {
-  width: 95%;
-  max-width: 100% !important;
-  height: auto !important;
-  display: block !important;
-  margin: 10px auto !important;
-  border: none;
-  box-shadow: none%;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 0 15px 0;
+  border: 10px none;
+  box-shadow: none;
 }
 
+aside {
+  width: 100%;
+  max-width: 37.5%;
+  height: auto;
+  display: block;
+  color: #221111;
+  text-align: left;
+  clear: both;
+  margin-top: 2rem;
+  position: relative;
+  padding: 10px;
+}
+
+/* Paragrafos do aside e reset de indentacao */
+aside p,
+aside p.identacao {
+  margin: 15px 0 0 0;
+  padding-left: left;
+  text-align: left;
+}
+
+aside h2 {
+  position: absolute;
+  top: 40px;
+  left: 450px;
+  color: #048f0f;
+}
+
+/* Rodape da pagina */
 footer {
-  width: 41.2% !important;
-  max-width: 50% !important;
-  margin-top: 0 !important;
+  width: 41.2%;
+  max-width: 50%;
+  margin-top: 0;
   margin-bottom: 0;
-  margin-left: o !important;
-  box-sizing: border-box !important;
-  position: relative !important;
+  margin-left: o;
+  box-sizing: border-box;
+  position: relative;
 }
 
 footer p {
@@ -115,11 +126,17 @@ footer p {
   padding: 10px 0;
 }
 
+/* Classes utilitarias */
 /* Seletor de classe */
 .caixa {
   margin: 1rem;
-  border: 1px solid rgb(0, 0, 0 / 100%);
+  border: 2px solid rgba(0, 0, 0, 0.2);
   padding: 1rem;
-  background-color: none;
+  background-color: rgb(245, 238, 209);
   color: black;
+}
+
+/* Classe de identação padronizadora*/
+.identacao {
+  padding-left: 2rem;
 }
