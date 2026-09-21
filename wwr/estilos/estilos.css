@@ -58,12 +58,12 @@ p {
 
 /* 4. COMPONENTE HERO */
 .hero {
-  position: absolute;
+  position: relative;
   width: 100%;
 }
 
 .hero article {
-  position: relative;
+  position: absolute;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -98,7 +98,7 @@ p {
 
 /* Texto da missão dentro do Hero */
 .hero p {
-  background-color: --cor-destaque2: #e9c46a;;
+  background-color: var(--cor-destaque2);
   margin: 0;
   padding: 20px;
   text-align: center;
