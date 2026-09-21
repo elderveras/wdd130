@@ -26,8 +26,8 @@ body {
 /* Menu de navegacao */
 nav {
   background-color: var(--cor-de-fundo);
-  max-width: 42%;
-  width: 40.5%;
+  max-width: 100%;
+  width: 100%;
   padding: 15px 25px;
 }
 
@@ -39,7 +39,7 @@ nav a {
 
 /* Conteudo principal */
 main {
-  max-width: 40%;
+  max-width: 100%;
   margin: 5px;
   padding: 0 5px;
 }
@@ -52,7 +52,7 @@ h1 {
 }
 
 main img {
-  width: 150px;
+  width: 200px;
   height: auto;
   border: 2px solid var(--cor-de-fundo);
   padding: 2px;
@@ -82,7 +82,7 @@ aside img {
 
 aside {
   width: 100%;
-  max-width: 37.5%;
+  max-width: 100%;
   height: auto;
   display: block;
   color: #221111;
@@ -101,17 +101,29 @@ aside p.identacao {
   text-align: left;
 }
 
+.container-imagem {
+  position: relative;
+  width: 100%;
+}
+
 aside h2 {
   position: absolute;
-  top: 40px;
-  left: 450px;
-  color: #048f0f;
+  top: 70px;
+  right: 105px;
+  left: auto;
+  background-color: rgba(2, 131, 15, 1);
+  color: #cbe6eb;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 2rem;
+  margin: 0;
+  z-index: 10;
 }
 
 /* Rodape da pagina */
 footer {
-  width: 41.2%;
-  max-width: 50%;
+  width: 100%;
+  max-width: 100%;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: o;
