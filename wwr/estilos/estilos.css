@@ -1,6 +1,4 @@
-/* 1. CONFIGURAÇÕES GERAIS, VARIÁVEIS E RESET (HEAD / GLOBAL)*/
-
-/* Cores e fontes do site */
+/* 1. CONFIGURAÇÕES GERAIS, VARIÁVEIS E RESET */
 :root {
   --cor-primaria: #055a05;
   --cor-secundaria: #f4a261;
@@ -10,163 +8,137 @@
   --fonte-body: Arial, Helvetica, sans-serif;
 }
 
-/* Reset básico das margens */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilo geral do corpo da página */
 body {
   font-family: var(--fonte-body);
   color: var(--cor-destaque1);
 }
 
-/* 2. CABEÇALHO E NAVEGAÇÃO (HEADER & NAV) */
+/* 2. CABEÇALHO E NAVEGAÇÃO */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
 
 header img {
   display: block;
-  width: 30%;
-  padding: 0 0 0 10px;
+  width: 150px;
   height: auto;
-  opacity: 1;
-  margin-bottom: var(--cor-barckgroud);
   filter: contrast(150%);
-  mix-blend-mode: screen;
 }
 
-nav {
-  /* Espaçamento/estilos de navegação */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
 }
 
-ul {
-  padding: 20px;
+nav a {
+  text-decoration: none;
+  color: var(--cor-destaque1);
+  font-weight: bold;
 }
 
-/* 3. CONTEÚDO PRINCIPAL (BODY / MAIN / DIV / SECTIONS / PARÁGRAFOS)*/
-
-main div img {
-  display: block;
-  width: 100%;
-  margin-left: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 0;
-  height: auto;
-}
-
+/* 3. ESTILOS GERAIS DE CONTEÚDO */
 h2 {
   font-family: var(--fonte-titulo);
-  color: #264653;
+  color: var(--cor-destaque1);
   text-align: center;
   padding: 10px;
 }
 
 p {
-  width: 100%;
-  padding: 20px;
-  margin-left: 20px;
+  padding: 15px;
   font-family: var(--fonte-titulo);
-  color: #055a05;
+  color: var(--cor-primaria);
   text-align: left;
 }
 
-section {
-  /* Espaçamento simples para seções */
+/* 4. COMPONENTE HERO */
+.hero {
+  position: relative;
+  width: 100%;
 }
 
-article {
-  margin: 10px;
+.hero article {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Imagem principal do hero ocupando 100% da largura */
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  float: none;
+  margin: 0;
+  padding: 0;
+  filter: contrast(120%);
+}
+
+/* Título H1 sobreposto no topo da imagem */
+.hero h1 {
+  position: absolute;
+  top: 30px;
+  left: 5%;
+  right: 5%;
+  z-index: 10;
+  padding: 15px;
+  text-align: center;
+  margin: 0;
+  background-color: rgba(38, 70, 83, 0.85);
+  color: var(--cor-secundaria);
+  font-family: var(--fonte-titulo);
+}
+
+/* Texto da missão dentro do Hero */
+.hero p {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+/* 5. SEÇÃO DE HISTÓRIA E OUTROS ARTIGOS */
+.historia-container {
+  max-width: 900px;
+  margin: 20px auto;
   padding: 10px;
 }
 
-article img,
-main article img {
+.historia-container img {
   display: block;
-  float: none;
-  width: 800px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 600px;
   height: auto;
   margin: 20px auto;
 }
 
-/* 4. COMPONENTE HERO (SEÇÃO ESPECÍFICA DA MAIN)*/
-
-.hero {
-  width: 100%;
-  position: relative;
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.hero img {
-  display: block;
-  width: 100%;
-  padding: 20px;
-  margin: auto;
-  box-sizing: border-box;
-  height: auto;
-  filter: contrast(150%);
-  /* mix-blend-mode removido para que o texto e a barra fiquem visíveis sem distorção */
-}
-
-.hero h1 {
-  position: absolute;
-  top: 50px;
-  left: 20px;
-  right: 20px;
-  width: auto;
-  box-sizing: border-box;
-  padding: 15px;
-  text-align: center;
-  margin: 0;
-
-  /* APENAS a cor de fundo azul tem 70% de opacidade (rgba) */
-  background-color: rgba(38, 70, 83, 0.7);
-
-  /* As letras ficam 100% SÓLIDAS na cor laranja suave */
-  color: #f4a261;
-  font-family: var(--fonte-titulo);
-
-  mix-blend-mode: normal;
-}
-
-.hero article {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-}
-
-.hero article img {
-  float: right;
-  width: 125px;
-  height: auto;
-  margin-left: 10px;
-}
-
-/*5. RODAPÉ E MÍDIAS SOCIAIS (FOOTER)*/
-
-.redes-sociais a {
-  text-decoration: none;
-}
-
+/* 6. RODAPÉ */
 footer {
-  width: 600px;
-  height: 5px;
-  margin: 5px auto;
+  width: 100%;
+  margin: 30px auto 10px auto;
   text-align: center;
   padding: 15px;
 }
 
-footer img {
-  width: 50px;
-  max-width: 100%;
+.redes-sociais {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.redes-sociais img {
+  width: 30px;
   height: auto;
-  margin: 10px 10px;
-  top: 100px;
 }
