@@ -20,12 +20,6 @@ body {
 }
 
 /* 2. CABEÇALHO E NAVEGAÇÃO */
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
-}
 
 header img {
   display: block;
@@ -35,6 +29,7 @@ header img {
 }
 
 nav ul {
+  margin: 10px;
   display: flex;
   list-style: none;
   gap: 15px;
@@ -81,7 +76,7 @@ p {
   max-width: 100%;
   float: none;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   filter: contrast(120%);
 }
 
@@ -123,12 +118,30 @@ p {
   margin: 20px auto;
 }
 
+main article img,
+article img {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin: 30px auto;
+  float: none;
+}
+
 /* 6. RODAPÉ */
 footer {
   width: 100%;
-  margin: 30px auto 10px auto;
+  height: auto;
+  margin: 40px auto 20px auto;
   text-align: center;
   padding: 15px;
+}
+
+footer p {
+  width: 100%;
+  margin: 0 auto 15px auto;
+  padding: 0;
+  text-align: center;
 }
 
 .redes-sociais {
@@ -139,6 +152,8 @@ footer {
 }
 
 .redes-sociais img {
-  width: 30px;
+  width: 35px;
   height: auto;
+  margin: 0;
+  position: static;
 }
