@@ -1,34 +1,29 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Meta description (Resumo da página) -->
-    <meta
-      name="description"
-      content="Conheça a história, a missão e os valores da nossa empresa de Rafting. Venha se aventurar conosco!"
+  <header>
+    <img
+      src="imagens/rio-abaixo-nova.jpg"
+      alt="Logotipo da Rio Abaixo Rafting"
     />
+    <nav>
+      <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="passeios.html">Passeios</a></li>
+        <li><a href="contato.html">Fale Conosco</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Meta author (Seu nome completo) -->
-    <meta name="author" content="Eduardo D. B. L. de Veras" />
-
-    <title>Sobre Nós - Rio Abaixo Rafting</title>
-
-    <!-- Vinculação do arquivo CSS externa (instruções 4) -->
-    <link rel="stylesheet" href="../wwr/estilos/rafting.css" />
-  </head>
   <body>
-    <!-- Elemento HEADER (Cabeçalho do site) -->
+    <!-- Cabeçalho -->
     <header>
-      <!-- Item 1: Logotipo da empresa -->
       <img
         src="imagens/rio-abaixo-nova.jpg"
         alt="Logotipo da Rio Abaixo Rafting"
-        class="img"
       />
 
-      <!-- Item 2: Menu de navegação com 4 links -->
+      <!-- Menu principal -->
       <nav>
         <ul>
           <li><a href="index.html">Página Inicial</a></li>
@@ -39,83 +34,85 @@
       </nav>
     </header>
 
-    <!-- Elemento MAIN (Conteúdo principal da página) -->
+    <!-- Conteúdo principal -->
     <main>
-      <!-- Elemento 1: Div com a classe hero -->
+      <!-- Área principal da página -->
       <div class="hero">
+        <h1>Rio Abaixo Rafting</h1>
+
+        <!-- Imagem principal -->
         <article>
-          <!-- Imagem de fundo (Hero Image) -->
           <img
             src="imagens/rafiting-nova.jpg"
             alt="Pessoas fazendo Rafting nas corredeiras."
-            class="img"
           />
-
-          <!-- Título H1 com o nome da empresa -->
-          <h1>Rio Abaixo Rafting</h1>
-
-          <!-- Missão/objetivo (provisório) -->
-          <p>
-            Nossa missão é gerar emoções inesquecíveis conectando pessoas à
-            natureza através de experiências seguras, emocionantes e
-            inesquecíveis. Valorizamos a aventura com responsabilidade e
-            respeito ao meio ambiente, trabalho em equipe e apreciação da
-            natureza. Viva a energia das corredeiras com os melhores guias e um
-            atendimento humanizado!
-          </p>
         </article>
+
+        <!-- Missão da empresa -->
+        <p class="missao">
+          Nossa missão é gerar emoções inesquecíveis conectando pessoas à
+          natureza através de experiências seguras, emocionantes e
+          inesquecíveis. Valorizamos a aventura com responsabilidade e respeito
+          ao meio ambiente, trabalho em equipe e apreciação da natureza. Viva a
+          energia das corredeiras com os melhores guias e um atendimento
+          humanizado!
+        </p>
       </div>
 
-      <article class="historia-container">
-        <!-- Imagem menor dentro do artigo -->
+      <!-- História -->
+      <section class="historia">
+        <h2>História</h2>
+
         <img
           src="imagens/cliente-feliz.jpg"
           alt="Alegria do cliente ao realizar o Rafting"
-          class="img"
         />
 
-        <!-- Elemento 2: Seção de História -->
-        <section>
-          <h2>História</h2>
-          <p>
-            A Rio Abaixo Rafting começou com um pequeno grupo de apaixonados por
-            rios e esportes ao ar livre. Com o tempo, reunimos guias
-            qualificados, aprimoramos nossos equipamentos e construímos uma
-            reputação baseada em segurança e diversão. Hoje, recebemos famílias,
-            iniciantes e aventureiros experientes para explorar as melhores
-            rotas de corredeiras da região. Trazendo a melhor sensação de
-            aventura, alegria e memórias que a natureza pode nos conceder.
-          </p>
-        </section>
+        <p>
+          A Rio Abaixo Rafting começou com um pequeno grupo de apaixonados por
+          rios e esportes ao ar livre. Com o tempo, reunimos guias qualificados,
+          aprimoramos nossos equipamentos e construímos uma reputação baseada em
+          segurança e diversão. Hoje, recebemos famílias, iniciantes e
+          aventureiros experientes para explorar as melhores rotas de
+          corredeiras da região. Trazendo a melhor sensação de aventura, alegria
+          e memórias que a natureza pode nos conceder.
+        </p>
+      </section>
 
-        <!-- Elemento 3: Seção de ação (Vazia temporariamente) -->
-        <section>
-          <h2>A aventura está te esperando!</h2>
-          <!-- Conteúdo vazio provisório, conforme a instrução -->
-        </section>
-      </article>
+      <!-- Mensagem final -->
+      <section class="aventura">
+        <h2>A aventura está te esperando!</h2>
+      </section>
     </main>
 
-    <!-- FOOTER (Rodapé da página) -->
+    <!-- Rodapé -->
     <footer>
-      <!-- Direitos autorais, ano, empresa e seu nome -->
       <p>
         &copy; 2026 Rio Abaixo Rafting | Eduardo David Barbosa Lucena de Veras
       </p>
 
-      <!-- Links e ícones de redes sociais -->
+      <!-- Redes sociais -->
       <nav class="redes-sociais">
-        <a href="https://facebook.com" target="_blank">
-          <img src="imagens/facebook-square.svg" alt="Ícone do Facebook" />
-        </a>
-        <a href="https://linkedin.com" target="_blank">
-          <img src="imagens/linkedin-square.svg" alt="Ícone do LinkedIn" />
-        </a>
-        <a href="https://instagram.com" target="_blank">
-          <img
-            src="..//wwr/imagens/instagram-square.svg"
-            alt="Ícone do Instagram"
-          />
+        <a
+          href="https://facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="imagens/facebook-square.svg" alt="Ícone do Facebook"
+        /></a>
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="imagens/linkedin-square.svg" alt="Ícone do LinkedIn"
+        /></a>
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="imagens/instagram-square.svg" alt="Ícone do Instagram" />
         </a>
       </nav>
     </footer>

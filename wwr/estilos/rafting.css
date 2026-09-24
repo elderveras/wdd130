@@ -1,4 +1,3 @@
-/* 1. CONFIGURAÇÕES GERAIS, VARIÁVEIS E RESET */
 :root {
   --cor-primaria: #055a05;
   --cor-secundaria: #f4a261;
@@ -8,136 +7,198 @@
   --fonte-body: Arial, Helvetica, sans-serif;
 }
 
+/* Reset */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Corpo da página */
+
 body {
   font-family: var(--fonte-body);
   color: var(--cor-destaque1);
+  background-color: white;
 }
 
-/* 2. CABEÇALHO E NAVEGAÇÃO */
+/* Cabeçalho */
+
+header {
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px 0;
+  text-align: left;
+}
 
 header img {
   display: block;
   width: 150px;
   height: auto;
-  filter: contrast(150%);
+  opacity: 0.65;
+}
+
+/* Menu abaixo da logo */
+
+header nav {
+  margin-top: 10px;
 }
 
 nav ul {
-  margin: 10px;
   display: flex;
+  gap: 20px;
   list-style: none;
-  gap: 15px;
 }
 
 nav a {
-  text-decoration: none;
   color: var(--cor-destaque1);
+  text-decoration: none;
   font-weight: bold;
 }
 
-/* 3. ESTILOS GERAIS DE CONTEÚDO */
-h2 {
-  font-family: var(--fonte-titulo);
-  color: var(--cor-destaque1);
-  text-align: center;
-  padding: 10px;
-}
-
-p {
-  padding: 15px;
-  font-family: var(--fonte-titulo);
+nav a:hover {
   color: var(--cor-primaria);
-  text-align: left;
 }
 
-/* 4. COMPONENTE HERO */
+/* Conteúdo principal */
+
+main {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Área principal */
+
 .hero {
   position: relative;
   width: 100%;
+  min-height: 600px;
+  margin-top: 20px;
+  padding: 25px;
+  background-color: var(--cor-destaque2);
+  text-align: center;
 }
+
+/* Imagem principal */
 
 .hero article {
   position: absolute;
-  margin: 0;
-  padding: 0;
-  width: 100%;
+  top: 80px;
+  left: 50%;
+  width: 800px;
+  max-width: 90%;
+  height: 400px;
+  transform: translateX(-50%);
+  overflow: hidden;
 }
 
 .hero article img {
   float: right;
-}
-
-/* Imagem principal do hero ocupando 100% da largura */
-.hero img {
-  display: block;
   width: 100%;
-  height: auto;
-  max-width: 100%;
-  float: right;
-  margin: 0;
-  padding: 20px;
-  filter: contrast(120%);
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Título H1 sobreposto no topo da imagem */
+/* Título sobre a imagem */
+
 .hero h1 {
   position: absolute;
-  top: 30px;
-  left: 5%;
-  right: 5%;
-  z-index: 10;
-  padding: 15px;
-  text-align: center;
-  margin: 0;
-  background-color: rgba(38, 70, 83, 0.85);
+  top: 100px;
+  left: 50%;
+  width: 700px;
+  max-width: 80%;
+  transform: translateX(-50%);
+  z-index: 2;
+  padding: 12px;
+  background-color: rgba(38, 70, 83, 0.75);
   color: var(--cor-secundaria);
   font-family: var(--fonte-titulo);
-}
-
-/* Texto da missão dentro do Hero */
-.hero p {
-  background-color: var(--cor-destaque2);
-  margin: 0;
-  padding: 20px;
   text-align: center;
 }
 
-/* 5. SEÇÃO DE HISTÓRIA E OUTROS ARTIGOS */
-.historia-container {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 10px;
+/* Texto da missão */
+
+.hero .missao {
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  width: 850px;
+  max-width: 90%;
+  transform: translateX(-50%);
+  padding: 15px;
+  background-color: var(--cor-destaque2);
+  color: var(--cor-destaque1);
+  text-align: center;
 }
 
-.historia-container img {
+/* Textos */
+
+p {
+  font-family: var(--fonte-body);
+  line-height: 1.5;
+}
+
+/* História */
+
+.historia {
+  width: 90%;
+  max-width: 850px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.historia h2 {
+  padding: 10px;
+  font-family: var(--fonte-titulo);
+  color: var(--cor-destaque1);
+}
+
+.historia img {
   display: block;
   width: 100%;
   max-width: 700px;
   height: auto;
-  margin: 30px auto;
+  margin: 10px auto 20px;
 }
 
-/* 6. RODAPÉ */
-footer {
-  width: 100%;
-  height: auto;
-  margin: 40px auto 20px auto;
+.historia p {
+  padding: 10px;
+  color: var(--cor-primaria);
+  text-align: left;
+}
+
+/* Mensagem final */
+
+.aventura {
+  margin: 30px auto;
   text-align: center;
+}
+
+.aventura h2 {
   padding: 15px;
+  font-family: var(--fonte-titulo);
+  color: var(--cor-destaque1);
+}
+
+/* Rodapé */
+
+footer {
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto 20px;
+  padding: 15px;
+  text-align: center;
 }
 
 footer p {
-  width: 100%;
-  margin: 0 auto 15px auto;
-  padding: 0;
+  margin-bottom: 15px;
+  color: var(--cor-primaria);
   text-align: center;
 }
+
+/* Redes sociais */
 
 .redes-sociais {
   display: flex;
@@ -146,9 +207,11 @@ footer p {
   margin-top: 10px;
 }
 
+.redes-sociais a {
+  text-decoration: none;
+}
+
 .redes-sociais img {
   width: 35px;
   height: auto;
-  margin: 0;
-  position: static;
 }
