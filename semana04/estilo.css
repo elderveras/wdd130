@@ -1,0 +1,136 @@
+/* CONFIGURAÇÕES GERAIS E RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/* CABEÇALHO E NAVEGAÇÃO */
+header {
+  background-color: #264653;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #2a9d8f;
+  border-radius: 4px;
+}
+
+/* CONTEÚDO PRINCIPAL (MAIN) */
+main {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+h1.identacao {
+  color: #264653;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #2a9d8f;
+  padding-bottom: 5px;
+}
+
+.perfil-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.perfil-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.identacao {
+  text-indent: 20px;
+  text-align: justify;
+}
+
+/* LISTAS E CAIXAS DENTRO DO CONTEÚDO */
+.caixa {
+  background-color: #e9c46a;
+  padding: 15px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+ul.caixa {
+  list-style-type: square;
+  padding-left: 35px;
+}
+
+ul.caixa li a {
+  color: #264653;
+  font-weight: bold;
+}
+
+/* BARRA LATERAL (ASIDE) */
+aside {
+  background-color: #e76f51;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+aside h2 {
+  margin-bottom: 10px;
+}
+
+aside p {
+  color: #ffffff;
+  text-indent: 0;
+}
+
+.container-imagem img.img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+/* RODAPÉ (FOOTER) */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #264653;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.footer-texxt {
+  color: #ffffff;
+  text-indent: 0;
+  text-align: center;
+}

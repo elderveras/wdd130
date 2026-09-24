@@ -28,7 +28,7 @@ nav {
   background-color: var(--cor-de-fundo);
   max-width: 100%;
   width: 100%;
-  padding: 15px 25px;
+  padding: 25px 25px;
 }
 
 nav a {
@@ -78,6 +78,10 @@ aside img {
   margin: 0 0 15px 0;
   border: 10px none;
   box-shadow: none;
+}
+
+li {
+  padding: 2px;
 }
 
 aside {
