@@ -28,18 +28,14 @@ body {
 header {
   width: 90%;
   margin: 0 auto;
-
   padding: 15px 0;
-
   text-align: left;
 }
 
 header img {
   display: block;
-
   width: 150px;
   height: auto;
-
   opacity: 0.65;
 }
 
@@ -51,9 +47,7 @@ header nav {
 
 nav ul {
   display: flex;
-
   gap: 20px;
-
   list-style: none;
 }
 
@@ -81,17 +75,11 @@ main {
 
 .hero {
   position: relative;
-
   width: 100%;
-
   min-height: 600px;
-
   margin-top: 20px;
-
   padding: 25px;
-
   background-color: var(--cor-destaque2);
-
   text-align: center;
 }
 
@@ -99,26 +87,19 @@ main {
 
 .hero article {
   position: absolute;
-
   top: 80px;
   left: 50%;
-
   width: 800px;
   max-width: 90%;
-
   height: 400px;
-
   transform: translateX(-50%);
-
   overflow: hidden;
 }
 
 .hero article img {
   float: right;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
 }
 
@@ -126,25 +107,16 @@ main {
 
 .hero h1 {
   position: absolute;
-
   top: 100px;
   left: 50%;
-
   width: 700px;
   max-width: 80%;
-
   transform: translateX(-50%);
-
   z-index: 2;
-
   padding: 12px;
-
   background-color: rgba(38, 70, 83, 0.75);
-
   color: var(--cor-secundaria);
-
   font-family: var(--fonte-titulo);
-
   text-align: center;
 }
 
@@ -152,21 +124,14 @@ main {
 
 .hero .missao {
   position: absolute;
-
   left: 50%;
   bottom: 25px;
-
   width: 850px;
   max-width: 90%;
-
   transform: translateX(-50%);
-
   padding: 15px;
-
   background-color: var(--cor-destaque2);
-
   color: var(--cor-destaque1);
-
   text-align: center;
 }
 
@@ -182,35 +147,27 @@ p {
 .historia {
   width: 90%;
   max-width: 850px;
-
   margin: 20px auto;
-
   text-align: center;
 }
 
 .historia h2 {
   padding: 10px;
-
   font-family: var(--fonte-titulo);
   color: var(--cor-destaque1);
 }
 
 .historia img {
   display: block;
-
   width: 100%;
   max-width: 700px;
-
   height: auto;
-
   margin: 10px auto 20px;
 }
 
 .historia p {
   padding: 10px;
-
   color: var(--cor-primaria);
-
   text-align: left;
 }
 
@@ -218,13 +175,11 @@ p {
 
 .aventura {
   margin: 30px auto;
-
   text-align: center;
 }
 
 .aventura h2 {
   padding: 15px;
-
   font-family: var(--fonte-titulo);
   color: var(--cor-destaque1);
 }
@@ -234,19 +189,14 @@ p {
 footer {
   width: 90%;
   max-width: 1000px;
-
   margin: 30px auto 20px;
-
   padding: 15px;
-
   text-align: center;
 }
 
 footer p {
   margin-bottom: 15px;
-
   color: var(--cor-primaria);
-
   text-align: center;
 }
 
@@ -254,11 +204,8 @@ footer p {
 
 .redes-sociais {
   display: flex;
-
   justify-content: center;
-
   gap: 15px;
-
   margin-top: 10px;
 }
 
