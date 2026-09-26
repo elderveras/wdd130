@@ -19,36 +19,56 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1;
-  color: #381c1c;
+  color: rgb(41, 92, 139);
   background: var(--cor-barckgroud);
+}
+
+header,
+footer {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+header,
+footer,
+.grid {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
 }
 
 /* Menu de navegacao */
 nav {
   background-color: var(--cor-de-fundo);
-  max-width: 100%;
-  width: 100%;
-  padding: 25px 25px;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+  display: flex;
 }
 
 nav a {
   color: var(--cor-letras-botao);
   display: block;
-  padding: 10px;
+  padding: 0.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+nav li {
+  padding: 20px;
 }
 
 /* Conteudo principal */
 main {
-  max-width: 100%;
-  margin: 5px;
-  padding: 0 5px;
-}
-
-h1 {
-  color: var(--cor-de-fundo);
-  margin-bottom: var(--margin-botton1);
-  text-align: left;
-  margin: 10px 0;
+  grid-column: 2/3;
+  margin: 1rem;
 }
 
 main img {
@@ -60,13 +80,36 @@ main img {
   float: right;
 }
 
+h1 {
+  color: var(--cor-de-fundo);
+  margin-bottom: var(--margin-botton1);
+  text-align: left;
+  margin: 10px 0;
+  border-bottom: 2px #381c1c;
+}
+
 p {
   padding: 0;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 0.5rem;
   margin-bottom: var(--marggin-botton2);
+}
+
+aside {
+  width: 20rem;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  color: #221111;
+  text-align: left;
+  clear: both;
+  margin-top: 2rem;
+  position: relative;
+  padding: 10px;
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
 
 /* Conteudo lateral (aside) e imagem */
@@ -78,23 +121,6 @@ aside img {
   margin: 0 0 15px 0;
   border: 10px none;
   box-shadow: none;
-}
-
-li {
-  padding: 2px;
-}
-
-aside {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  color: #221111;
-  text-align: left;
-  clear: both;
-  margin-top: 2rem;
-  position: relative;
-  padding: 10px;
 }
 
 /* Paragrafos do aside e reset de indentacao */
@@ -140,6 +166,11 @@ footer p {
   text-align: center;
   background-color: #034f7a;
   padding: 10px 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0; /* Correção do 'o' para 0 */
+  box-sizing: border-box;
+  position: relative;
 }
 
 /* Classes utilitarias */
