@@ -1,59 +1,62 @@
-/* Reset basico das margens e caixa */
+/* Reset básico das margens e caixa */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Variaveis globais de cores e espacamentos */
+/* Variáveis globais */
 :root {
-  /* Criação de variáveis. */
-  --cor-de-fundo: rgb(41, 92, 139);
+  --cor-de-fundo: #7d821b;
   --cor-letras-botao: rgb(213, 216, 50);
-  --cor-barckgroud: white;
-  --margin-botton1: 10px;
-  --marggin-botton2: 10px;
+  --cor-background: white;
+  --margin-bottom1: 10px;
+  --margin-bottom2: 10px;
 }
 
 /* Estilo geral do corpo */
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1;
-  color: rgb(41, 92, 139);
-  background: var(--cor-barckgroud);
+  color: #7d821b;
+  background: var(--cor-background);
 }
 
-header,
-footer {
-  max-width: 840px;
-  margin: 0 auto;
-}
-
+/* Cabeçalho, rodapé e conteúdo */
 header,
 footer,
 .grid {
-  max-width: 100%;
+  max-width: 840px;
   margin: 0 auto;
 }
 
 .grid {
   display: grid;
-  align-items: center;
+  align-items: start;
+  grid-template-columns: 20rem 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Organização principal da página */
+.grid {
+  display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 20px;
 }
 
-/* Menu de navegacao */
+/* Menu de navegação */
 nav {
   background-color: var(--cor-de-fundo);
   justify-content: space-evenly;
   align-items: center;
   padding: 1rem;
   display: flex;
+  margin: 0 10px 0 10px;
 }
 
 nav a {
-  color: var(--cor-letras-botao);
+  color: var(--cor-background);
   display: block;
   padding: 0.5rem;
   text-decoration: none;
@@ -65,125 +68,145 @@ nav li {
   padding: 20px;
 }
 
-/* Conteudo principal */
+/* Conteúdo principal */
 main {
-  grid-column: 2/3;
+  grid-column: 2 / 3;
   margin: 1rem;
+  padding: 10px 10px;
 }
 
 main img {
   width: 200px;
   height: auto;
-  border: 2px solid var(--cor-de-fundo);
-  padding: 2px;
-  box-shadow: 0 0 30px rgb(128, 127, 127);
   float: right;
+  margin: 0 0 15px 15px;
+  border: 1px solid var(--cor-de-fundo);
+  padding: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgb(128, 127, 127);
 }
 
+main p {
+  display: block;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  color: #333;
+  text-align: left;
+}
+
+main p.identacao {
+  padding-left: 0;
+  text-align: left;
+  display: flex;
+}
+
+/* Títulos */
 h1 {
   color: var(--cor-de-fundo);
-  margin-bottom: var(--margin-botton1);
-  text-align: left;
   margin: 10px 0;
-  border-bottom: 2px #381c1c;
+  text-align: left;
+  border-bottom: 2px solid var(--cor-de-fundo);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: var(--margin-bottom2);
 }
 
 p {
   padding: 0;
+  color: hsl(0, 0%, 27%);
 }
 
-h2 {
-  font-size: 0.5rem;
-  margin-bottom: var(--marggin-botton2);
+ul.caixa.identacao li {
+  line-height: 1.2;
+  margin: 5px;
 }
 
+/* Conteúdo lateral */
 aside {
-  width: 20rem;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 98%;
   display: block;
-  color: #221111;
+  color: hsl(0, 0%, 27%);
   text-align: left;
-  clear: both;
   margin-top: 2rem;
-  position: relative;
-  padding: 10px;
-  grid-column: 1/2;
-  grid-row: 1/2;
+  padding: 1rem;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  border: 1px solid oklch(93.705% 0.00011 271.152);
+  background-color: lab(95.15% 0.01 -0.01);
+  margin: 10px 10px 10px 10px;
 }
 
-/* Conteudo lateral (aside) e imagem */
+/* Imagem do aside */
 aside img {
   width: 100%;
-  max-width: 100%;
   height: auto;
   display: block;
   margin: 0 0 15px 0;
-  border: 10px none;
-  box-shadow: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 3);
 }
 
-/* Paragrafos do aside e reset de indentacao */
-aside p,
-aside p.identacao {
+/* Texto do aside */
+aside p {
   margin: 15px 0 0 0;
-  padding-left: left;
+  padding: 10px;
   text-align: left;
+  width: 100%;
+  display: block;
 }
 
-.container-imagem {
+.templo-container {
   position: relative;
   width: 100%;
+  display: block;
 }
 
-aside h2 {
-  position: absolute;
-  top: 70px;
-  right: 105px;
-  left: auto;
-  background-color: rgba(2, 131, 15, 1);
+/* Título sobre a imagem */
+.templo-container h2 {
+  position: absolute !important;
+  top: 10px !important;
+  left: 10px !important;
+  background-color: #a0a723;
   color: #cbe6eb;
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-size: 2rem;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.9rem;
   margin: 0;
   z-index: 10;
+  white-space: nowrap;
 }
 
-/* Rodape da pagina */
+/* Caixa de conteúdo */
+.caixa {
+  clear: both;
+  margin: 1.5rem 0;
+  padding: 12px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: hsl(63, 80%, 90%);
+  color: black;
+}
+
+/* Identação */
+.identacao {
+  padding-left: 2rem;
+}
+
+/* Rodapé */
 footer {
   width: 100%;
-  max-width: 100%;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: o;
-  box-sizing: border-box;
+  max-width: 840px;
+  margin: 10 auto;
   position: relative;
 }
 
 footer p {
-  color: var(--cor-letras-botao);
+  color: var(--cor-de-fundo);
   text-align: center;
-  background-color: #034f7a;
+  background-color: transparent;
+  border-top: 2px solid var(--cor-de-fundo);
   padding: 10px 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: 0; /* Correção do 'o' para 0 */
-  box-sizing: border-box;
-  position: relative;
-}
-
-/* Classes utilitarias */
-/* Seletor de classe */
-.caixa {
-  margin: 1rem;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  background-color: rgb(245, 238, 209);
-  color: black;
-}
-
-/* Classe de identação padronizadora*/
-.identacao {
-  padding-left: 2rem;
+  margin: 10px;
+  margin-top: 10px;
 }
