@@ -103,9 +103,11 @@ main p.identacao {
 /* Títulos */
 h1 {
   color: var(--cor-de-fundo);
-  margin: 10px 0;
+  margin: 0 0 15px 0;
   text-align: left;
+  height: 3rem;
   border-bottom: 2px solid var(--cor-de-fundo);
+  text-indent: -30px;
 }
 
 h2 {
@@ -131,10 +133,10 @@ aside {
   color: hsl(0, 0%, 27%);
   text-align: left;
   margin-top: 2rem;
-  padding: 1rem;
+  padding: 1.2rem;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  border: 1px solid oklch(93.705% 0.00011 271.152);
+  border: 1px solid #d8d7d7;
   background-color: lab(95.15% 0.01 -0.01);
   margin: 10px 10px 10px 10px;
 }
