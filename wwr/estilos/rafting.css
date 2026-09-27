@@ -23,29 +23,28 @@ body {
   background-color: white;
 }
 
-/* Cabeçalho */
+/* CABEÇALHO */
 
 header {
-  width: 90%;
-  margin: 0 auto;
-  padding: 15px 0;
-  text-align: left;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+  max-width: 1000px;
+  margin: 10px auto;
+  padding: 15px 20px;
+  gap: 20px;
 }
 
 header img {
-  display: block;
-  width: 150px;
+  width: 180px;
   height: auto;
 }
 
-/* Menu abaixo da logo */
+/* Menu */
 
-header nav {
-  margin-top: 10px;
-}
-
-nav ul {
+header nav ul {
   display: flex;
+  justify-content: space-evenly;
   gap: 20px;
   list-style: none;
 }
@@ -60,78 +59,92 @@ nav a:hover {
   color: var(--cor-primaria);
 }
 
-/* Conteúdo principal */
+/* CONTEÚDO PRINCIPAL */
 
 main {
-  width: 90%;
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Área principal */
-
-/* Área principal */
+/* HERO */
 
 .hero {
   position: relative;
   width: 100%;
-  min-height: 600px;
-  margin-top: 20px;
-  padding: 25px;
-  background-color: var(--cor-destaque2);
-  text-align: center;
+  height: 540px;
+  margin: 20px 0;
 }
 
 /* Imagem principal */
 
 .hero article {
   position: absolute;
-  top: 20px;
-  left: 50%;
-  width: 800px;
-  max-width: 90%;
-  height: 400px;
-  transform: translateX(-50%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 540px;
   overflow: hidden;
 }
 
-.hero article img {
-  float: right;
+.hero article > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Título sobre a imagem */
+/* Título */
 
 .hero h1 {
   position: absolute;
   top: 30px;
   left: 50%;
-  width: 700px;
-  max-width: 80%;
   transform: translateX(-50%);
   z-index: 2;
-  padding: 12px;
+  width: 70%;
+  max-width: 600px;
+  padding: 12px 20px;
   background-color: rgba(38, 70, 83, 0.75);
   color: var(--cor-secundaria);
   font-family: var(--fonte-titulo);
   text-align: center;
 }
 
+/* Conteúdo da missão */
+
+.hero-conteudo {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  gap: 15px;
+  align-items: center;
+}
+
 /* Texto da missão */
 
 .hero .missao {
-  position: absolute;
-  left: 50%;
-  bottom: 25px;
-  width: 850px;
-  max-width: 90%;
-  transform: translateX(-50%);
-  padding: 10px;
-  background-color: var(--cor-destaque2);
+  padding: 15px;
+  background-color: rgba(233, 196, 106, 0.85);
   color: var(--cor-destaque1);
+
   text-align: left;
+  line-height: 1.4;
+  border-radius: 8px;
+}
+
+/* Imagem secundária */
+
+.hero-im-secundaria {
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+  border: 3px solid var(--cor-primaria);
+  border-radius: 6px;
 }
 
 /* Textos */
@@ -141,78 +154,107 @@ p {
   line-height: 1.5;
 }
 
-/* História */
+/* HISTÓRIA */
 
 .historia {
-  width: 90%;
-  max-width: 850px;
-  margin: 20px auto;
+  margin: 50px 0;
   text-align: center;
 }
 
 .historia h2 {
-  padding: 10px;
+  margin-bottom: 25px;
   font-family: var(--fonte-titulo);
   color: var(--cor-destaque1);
 }
 
-.historia img {
-  display: block;
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  margin: 10px auto 20px;
+/* Texto - imagem - texto */
+
+.historia-conteudo {
+  display: grid;
+  grid-template-columns: 1fr 400px 1fr;
+  gap: 25px;
+  align-items: center;
 }
 
-.historia p {
-  padding: 10px;
+.historia-conteudo p {
   color: var(--cor-primaria);
+  line-height: 1.6;
   text-align: left;
 }
 
-/* Mensagem final */
+.historia-conteudo img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* AVENTURA */
 
 .aventura {
-  margin: 30px auto;
+  margin: 50px 0;
   text-align: center;
 }
 
 .aventura h2 {
-  padding: 15px;
+  margin-bottom: 25px;
   font-family: var(--fonte-titulo);
   color: var(--cor-destaque1);
 }
 
-/* Rodapé */
+/* Cinco imagens lado a lado */
 
-footer {
-  width: 90%;
-  max-width: 1000px;
-  margin: 30px auto 20px;
-  padding: 15px;
+.aventuras {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.aventura figure {
+  margin: 0;
   text-align: center;
 }
 
+.aventura img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.aventura figcaption {
+  margin-top: 5px;
+  color: var(--cor-destaque1);
+}
+
+/* RODAPÉ */
+
+footer {
+  max-width: 1000px;
+  margin: 40px auto 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 3px solid var(--cor-destaque1);
+}
+
+/* Texto do rodapé */
+
 footer p {
-  margin-bottom: 15px;
   color: var(--cor-primaria);
-  text-align: center;
 }
 
 /* Redes sociais */
 
-.redes-sociais {
+.socialmedia {
   display: flex;
-  justify-content: center;
   gap: 15px;
-  margin-top: 10px;
 }
 
-.redes-sociais a {
+.socialmedia a {
   text-decoration: none;
 }
 
-.redes-sociais img {
-  width: 35px;
+.socialmedia img {
+  width: 32px;
   height: auto;
 }
