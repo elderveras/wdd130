@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+  box-sizing: border-box;
+}
+
+header {
+  margin: 1rem auto;
+  width: 650px;
+}
+
+h1 {
+  margin: 1rem;
+  font-size: 1.65rem;
+  color: olive;
+  text-align: center;
+}
+
+form {
+  width: center;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 2px solid grey;
+  border-radius: 0.6rem;
+  background-color: #eee;
+  display: grid;
+}
+
+fieldset {
+  display: grid;
+  gap: 5rem;
+  margin: 1rem;
+  border: 1px solid gray;
+  padding: 1rem;
+  color: olive;
+  font-weight: bold;
+}
+
+legend {
+  padding: 0.5rem;
+  color: olivedrab;
+  font-size: 1.3rem;
+}
+
+label,
+input,
+button,
+select,
+textarea {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  margin: 0 15px;
+  padding-left: 0.5rem;
+}
+
+select {
+  margin: 0 15px;
+  padding-left: 0.5rem;
+}
+
+label {
+  text-align: left;
+  padding-left: 1rem;
+  margin: 0 5px;
+}
+
+textarea {
+  margin: 0 15px;
+  padding-left: 0.5rem;
+}
+
+input,
+select,
+textarea {
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  color: darkolivegreen;
+}
+
+input [type="checkbox"] {
+  width: 10px;
+  height: 10px;
+  vertical-align: bottom;
+}
+
+button {
+  margin: 1rem;
+  background-color: olive;
+  color: white;
+  border: 2.5px solid white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+button:hover {
+  background-color: darkolivegreen;
+}
+
+footer {
+  margin: 1rem auto 0;
+  width: 650px;
+  text-align: center;
+  font-size: 0.95em;
+  color: darkolivegreen;
+  padding: 2px;
+  border-top: 1px solid olive;
+}

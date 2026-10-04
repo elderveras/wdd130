@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #333;
+}
+
+h1 {
+  margin: 1.5rem auto 1rem;
+  font-size: 1.5rem;
+  color: olive;
+  text-align: center;
+}
+
+form {
+  width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.6rem;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* LINHA ENVOLVENTE DOS GRUPOS */
+fieldset {
+  border: 1px solid #b0b0b0;
+  padding: 1.5rem;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+legend {
+  padding: 0 0.5rem;
+  color: olive;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* ALINHAMENTO DOS CAMPOS */
+.campo {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+}
+
+.campo-inline {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.campo-textarea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  padding: 0.4rem;
+  font-size: 1rem;
+  border: 1px solid #999;
+  border-radius: 0.2rem;
+}
+
+/* BOTÃO PEQUENO E CENTRALIZADO */
+button {
+  margin: 0 auto;
+  width: fit-content;
+  padding: 0.6rem 1.5rem;
+  background-color: olive;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkolivegreen;
+}
+
+footer {
+  margin: 1.5rem auto;
+  width: 600px;
+  text-align: center;
+  font-size: 1.05rem;
+  color: darkolivegreen;
+  padding-top: 0.5rem;
+  border-top: 1px solid olive;
+}
