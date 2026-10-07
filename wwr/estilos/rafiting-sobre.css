@@ -44,11 +44,21 @@ header img {
   height: auto;
 }
 
-/* Menu de navegação superior */
+/* Menu de navegação superior (Flexbox) */
 header nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: 100%;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: space-between; /* Distribui os itens uniformemente */
   align-items: center;
+  margin: 0;
+  padding: 0 16px;
 }
 
 /* Links do menu */
@@ -56,7 +66,12 @@ header nav a {
   text-decoration: none;
   color: var(--cor-primaria);
   font-weight: bold;
-  padding: 8px 12px;
+  padding: 8px 0;
+  white-space: nowrap;
+}
+
+header nav a:hover {
+  color: var(--cor-secundaria);
 }
 
 /* Mudar cor do link ao passar o mouse */
@@ -73,12 +88,17 @@ h2 {
   margin: 16px 0;
 }
 
-/* Estilos de páginas anteriores (Página Inicial) */
+/* ===================================================
+   Etapa 2 - Seções da Página Sobre Nós (sobre.html)
+   =================================================== */
+
+/* Hero Banner */
 .hero {
   position: relative;
+  margin-bottom: 32px;
 }
 
-.hero img {
+.hero > img {
   display: block;
   width: 100%;
   height: auto;
@@ -90,7 +110,7 @@ h2 {
   width: 100%;
   padding: 16px;
   text-align: center;
-  opacity: 0.7;
+  opacity: 0.85;
   background-color: var(--cor-destaque1);
   color: #ffffff;
 }
@@ -109,26 +129,31 @@ h2 {
   gap: 20px;
 }
 
-.hero article img {
+.hero article img,
+.hero-img-secundaria {
   width: 125px;
   height: auto;
-  margin-left: 15px;
   border-radius: 3px;
   flex-shrink: 0;
 }
 
-.hero article p {
+.hero-conteudo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero article p,
+p.missao {
   color: var(--cor-destaque1);
   line-height: 1.5;
   text-align: center;
   padding: 0;
   margin: 0;
+  font-size: 0.95rem;
 }
 
-section img {
-  width: 100%;
-}
-
+/* Seção História */
 .historia {
   margin: 32px 0;
 }
@@ -142,6 +167,7 @@ section img {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 16px;
   align-items: center;
+  text-align: center;
 }
 
 .historia img {
@@ -149,72 +175,49 @@ section img {
   width: 100%;
   height: auto;
   border-radius: 5px;
+  object-fit: cover;
 }
 
+/* Seção Galeria da Aventura (Suporta ambos os nomes de classe) */
 .aventura {
   margin: 32px 0;
 }
 
-.galeria-aventura {
+.galeria-aventura,
+.aventuras {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 12px;
   margin-top: 16px;
 }
 
-.galeria-aventura img {
+.galeria-aventura img,
+.aventuras img {
   width: 100%;
   height: 120px;
   object-fit: cover;
   border-radius: 4px;
 }
 
-.galeria-aventura figure {
+.galeria-aventura figure,
+.aventuras figure {
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-.galeria-aventura figcaption {
+.galeria-aventura figcaption,
+.aventuras figcaption {
   font-size: 0.85rem;
   margin-top: 6px;
   color: var(--cor-destaque1);
+  font-weight: bold;
 }
 
-/* Rodapé do site */
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid var(--cor-destaque1);
-  padding: 16px 0;
-  margin: 40px auto;
-}
+/* ===================================================
+   Etapa 3 - Seções da Página Fale Conosco (contato.html)
+   =================================================== */
 
-footer p {
-  font-size: 0.9rem;
-  margin: 0;
-  padding: 0;
-}
-
-/* Ícones de redes sociais no rodapé */
-footer nav.socialmedia {
-  display: flex;
-  gap: 15px;
-  margin: 0;
-  padding: 0;
-}
-
-footer nav.socialmedia a {
-  text-decoration: none;
-}
-
-footer nav.socialmedia img {
-  width: 32px;
-  height: 32px;
-}
-
-/* Seção de informações e mapa em duas colunas */
 .informacoes-empresa {
   margin: 32px 0;
 }
@@ -235,14 +238,12 @@ footer nav.socialmedia img {
   line-height: 1.6;
 }
 
-/* Ajuste do mapa para ocupar todo o container */
 .mapa-container iframe {
   width: 100%;
   border: 0;
   border-radius: 8px;
 }
 
-/* Seção dos funcionários em três colunas */
 .equipe {
   margin: 32px 0;
 }
@@ -253,7 +254,6 @@ footer nav.socialmedia img {
   gap: 20px;
 }
 
-/* Cartão individual do funcionário */
 .equipe-grid figure {
   text-align: center;
   background-color: #f8fafc;
@@ -263,7 +263,6 @@ footer nav.socialmedia img {
   margin: 0;
 }
 
-/* Fotos redondas dos funcionários */
 .equipe-grid img {
   width: 100%;
   max-width: 180px;
@@ -279,7 +278,6 @@ footer nav.socialmedia img {
   line-height: 1.4;
 }
 
-/* Caixa do formulário de contato */
 .formulario-secao {
   background-color: #f8fafc;
   padding: 24px;
@@ -296,7 +294,6 @@ form {
   margin: 0 auto;
 }
 
-/* Campos de texto do formulário */
 .campo {
   display: flex;
   flex-direction: column;
@@ -317,7 +314,6 @@ form {
   font-family: var(--fonte-body);
 }
 
-/* Caixa das opções de seleção (radio) */
 .campo-radio {
   border: 1px solid #cbd5e1;
   padding: 12px 16px;
@@ -337,14 +333,12 @@ form {
   cursor: pointer;
 }
 
-/* Opção de caixa de seleção (checkbox) */
 .campo-checkbox {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-/* Botão de envio do formulário */
 .btn-enviar {
   background-color: var(--cor-primaria);
   color: #ffffff;
@@ -357,7 +351,38 @@ form {
   transition: background-color 0.2s ease;
 }
 
-/* Efeito ao passar o mouse sobre o botão */
 .btn-enviar:hover {
   background-color: var(--cor-secundaria);
+}
+
+/* Rodapé do site */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--cor-destaque1);
+  padding: 16px 0;
+  margin: 40px auto;
+}
+
+footer p {
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
+}
+
+footer nav.socialmedia {
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+footer nav.socialmedia a {
+  text-decoration: none;
+}
+
+footer nav.socialmedia img {
+  width: 32px;
+  height: 32px;
 }

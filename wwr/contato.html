@@ -1,18 +1,26 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
+    <!-- Configuração de acentuação e tela para celulares -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Descrição para buscadores (Google) e autor -->
     <meta
       name="description"
       content="Entre em contato com a equipe da Rio Abaixo Rafting. Tire dúvidas sobre reservas, passeios e viva uma aventura inesquecível conosco!"
     />
     <meta name="author" content="Eduardo David Barbosa Lucena de Veras" />
+
+    <!-- Link para a folha de estilos CSS -->
     <link rel="stylesheet" href="estilos/rafiting.css" />
-    <title>Fale Conosco - Rio Abaixo Rafiting</title>
+
+    <!-- Título que aparece na aba do navegador -->
+    <title>Fale Conosco - Rio Abaixo Rafting</title>
   </head>
 
   <body>
+    <!-- Cabeçalho da página com logo e menu -->
     <header>
       <img
         src="imagens/rio-abaixo-nova.jpg"
@@ -27,21 +35,25 @@
       </nav>
     </header>
 
+    <!-- Conteúdo principal da página -->
     <main>
       <h1>Fale Conosco - Rio Abaixo Rafting</h1>
 
+      <!-- Seção com dados de contato e mapa -->
       <section class="informacoes-empresa">
         <h2>Nossa Sede e Contato</h2>
         <div class="empresa-grid">
+          <!-- Dados de endereço e telefone -->
           <div class="dados-contato">
             <p>
-              <strong>Endereço:</strong> Av. das Corredeiras, 1000- Vale da
+              <strong>Endereço:</strong> Av. das Corredeiras, 1000 - Vale da
               Aventura, PE
             </p>
             <p><strong>Telefone:</strong> (81) 98765-4321 / (81) 3456-7890</p>
             <p><strong>E-mail:</strong> contato@rioabaixorafting.com.br</p>
           </div>
 
+          <!-- Mapa incorporado do Google Maps -->
           <div class="mapa-container">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.4132488319693!2d-34.91821032501062!3d-8.059288291968305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18a1f26e25f7%3A0xb308a342419a5840!2sRecife%2C%20PE!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr"
@@ -55,9 +67,11 @@
         </div>
       </section>
 
+      <!-- Seção com fotos dos funcionários e seus cargos -->
       <section class="equipe">
         <h2>Nossa Equipe</h2>
         <div class="equipe-grid">
+          <!-- Funcionário 1 -->
           <figure>
             <img
               src="imagens/carlos-silva.jpg"
@@ -68,6 +82,7 @@
             </figcaption>
           </figure>
 
+          <!-- Funcionário 2 -->
           <figure>
             <img
               src="imagens/ana-souza.jpg"
@@ -78,6 +93,7 @@
             </figcaption>
           </figure>
 
+          <!-- Funcionário 3 -->
           <figure>
             <img
               src="imagens/mariana-costa.jpg"
@@ -90,10 +106,11 @@
         </div>
       </section>
 
-      <!-- Bloco 4: Formulário de Contato -->
+      <!-- Seção do formulário de contato -->
       <section class="formulario-secao">
         <h2>Envie uma Mensagem</h2>
         <form action="#" method="post">
+          <!-- Campo Nome -->
           <div class="campo">
             <label for="nome">Nome Completo:</label>
             <input
@@ -105,6 +122,7 @@
             />
           </div>
 
+          <!-- Campo E-mail -->
           <div class="campo">
             <label for="email">E-mail:</label>
             <input
@@ -116,6 +134,7 @@
             />
           </div>
 
+          <!-- Opções de seleção única (Radio) -->
           <fieldset class="campo-radio">
             <legend>Finalidade da Mensagem:</legend>
             <label for="geral">
@@ -148,6 +167,7 @@
             </label>
           </fieldset>
 
+          <!-- Campo de Mensagem grande -->
           <div class="campo">
             <label for="mensagem">Mensagem:</label>
             <textarea
@@ -159,6 +179,7 @@
             ></textarea>
           </div>
 
+          <!-- Caixa de confirmação de Newsletter -->
           <div class="campo-checkbox">
             <input
               type="checkbox"
@@ -169,11 +190,13 @@
             <label for="newsletter">Quero receber a newsletter mensal</label>
           </div>
 
+          <!-- Botão para enviar -->
           <button type="submit" class="btn-enviar">Enviar Mensagem</button>
         </form>
       </section>
     </main>
 
+    <!-- Rodapé com direitos autorais e links de redes sociais -->
     <footer>
       <p>
         &copy; 2026 Rio Abaixo Rafting | Eduardo David Barbosa Lucena de Veras
