@@ -1,11 +1,10 @@
-/* Configurações Globais e Variáveis (Todas as fontes em Arial)*/
+/* Configurações Globais e Variáveis */
 :root {
   --cor-primaria: darkolivegreen;
   --cor-secundaria: #3e4f21;
   --cor-destaque1: #264653;
   --cor-destaque2: #e9c46a;
-  --fonte-titulo: Arial, Helvetica, sans-serif;
-  --fonte-body: Arial, Helvetica, sans-serif;
+  --fonte-padrao: Arial, Helvetica, sans-serif;
 }
 
 * {
@@ -15,12 +14,12 @@
 }
 
 body {
-  font-family: var(--fonte-body);
+  font-family: var(--fonte-padrao);
   color: var(--cor-destaque1);
   background-color: #ffffff;
 }
 
-/* 1 - Cabeçalho Personalizado*/
+/* 1 - Cabeçalho */
 header {
   width: 100%;
   background-color: #ffffff;
@@ -30,7 +29,6 @@ header {
   position: relative;
 }
 
-/* Logo alinhada à esquerda com margem de 10px */
 header img.logo {
   width: 160px;
   height: auto;
@@ -39,11 +37,9 @@ header img.logo {
   flex-shrink: 0;
 }
 
-/* Menu distribuído com 15% de margem de cada lado no espaço restante */
 header nav {
   flex-grow: 1;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding: 0 15%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,8 +51,6 @@ header nav ul {
   justify-content: space-between;
   align-items: center;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 header nav a {
@@ -73,7 +67,7 @@ header nav a:hover {
   color: var(--cor-secundaria);
 }
 
-/* 2 - Hero Section com Fusão Suave*/
+/* 2 - Hero Section */
 .hero-full {
   width: 100%;
   position: relative;
@@ -87,7 +81,6 @@ header nav a:hover {
   max-height: 60vh;
   object-fit: cover;
   display: block;
-
   -webkit-mask-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 1) 65%,
@@ -111,14 +104,12 @@ header nav a:hover {
   text-align: center;
   background-color: rgba(38, 70, 83, 0.85);
   color: #ffffff;
-  font-family: var(--fonte-titulo);
   font-size: 2.2rem;
   font-weight: bold;
   border-radius: 6px;
   z-index: 2;
 }
 
-/* Caixa de Missão (Página Sobre Nós) */
 .missao-texto {
   position: absolute;
   bottom: 110px;
@@ -129,7 +120,6 @@ header nav a:hover {
   border: 1px solid rgba(200, 200, 200, 0.7);
   border-radius: 12px;
   color: darkolivegreen;
-  font-weight: normal;
   font-size: 1rem;
   line-height: 1.4;
   text-align: left;
@@ -138,7 +128,15 @@ header nav a:hover {
   z-index: 3;
 }
 
-/* 3 - Estrutura Principal dos Blocos (60% Largura)*/
+.missao-texto-estatico {
+  text-align: center;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin: 20px 0 30px 0;
+  color: var(--cor-destaque1);
+}
+
+/* 3 - Estrutura Principal dos Blocos (60%) */
 main {
   width: 100%;
   padding: 10px 0 60px 0;
@@ -150,11 +148,12 @@ main {
   padding: 20px 0;
 }
 
+h1,
 h2 {
-  font-family: var(--fonte-titulo);
+  font-family: var(--fonte-padrao);
   color: var(--cor-primaria);
   text-align: center;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   font-size: 2.2rem;
   font-weight: bold;
 }
@@ -167,7 +166,7 @@ h2 {
   margin-bottom: 32px;
 }
 
-/* Página Passeios */
+/* Grid Passeios */
 .passeios-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -175,7 +174,6 @@ h2 {
   margin-top: 10px;
 }
 
-/* Card Fixo (Sem animação no hover) */
 .passeio-card {
   background-color: #ffffff;
   border: 1px solid #d1d5db;
@@ -210,7 +208,6 @@ h2 {
 }
 
 .passeio-card h3 {
-  font-family: var(--fonte-titulo);
   color: var(--cor-primaria);
   font-size: 1.4rem;
   font-weight: bold;
@@ -240,7 +237,6 @@ h2 {
   margin-bottom: 8px;
 }
 
-/* Apenas o Botão sofre alteração visual no hover */
 .btn-passeio {
   display: block;
   width: 100%;
@@ -251,18 +247,15 @@ h2 {
   padding: 12px 16px;
   text-decoration: none;
   border-radius: 8px;
-  transition:
-    background-color 0.2s ease,
-    transform 0.1s ease;
+  transition: background-color 0.2s ease;
   text-align: center;
 }
 
 .btn-passeio:hover {
   background-color: #3e4f21;
-  transform: translateY(-2px);
 }
 
-/* Página Sobre Nós */
+/* Sobre Nós */
 .historia-conteudo {
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
@@ -285,7 +278,7 @@ h2 {
   color: var(--cor-destaque1);
 }
 
-/* Página Fale Conosco */
+/* Fale Conosco */
 .contato-principal-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -349,7 +342,7 @@ h2 {
   border: 1px solid #cbd5e1;
   border-radius: 6px;
   font-size: 1rem;
-  font-family: var(--fonte-body);
+  font-family: var(--fonte-padrao);
 }
 
 .campo-radio {
@@ -367,27 +360,12 @@ h2 {
   gap: 8px;
 }
 
-.btn-enviar {
-  background-color: var(--cor-primaria);
-  color: #ffffff;
-  font-size: 1.1rem;
-  font-weight: bold;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.btn-enviar:hover {
-  background-color: var(--cor-secundaria);
-}
-
-/* Estilo base do botão */
+/* Botão do Formulário de Contato com Contraste WCAG AA Aprovado (Texto #ffffff em fundo darkolivegreen = 5.95:1) */
 .btn-garantir {
   display: inline-block;
   padding: 14px 28px;
   background-color: darkolivegreen;
+  color: #ffffff;
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -395,22 +373,13 @@ h2 {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Efeito ao passar o mouse (Hover) e ao focar */
 .btn-garantir:hover,
 .btn-garantir:focus {
-  background-color: darkolivegreen;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-}
-
-/* Efeito ao clicar (Active) */
-.btn-garantir:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: #3e4f21;
 }
 
 .equipe-secao {
@@ -439,7 +408,7 @@ h2 {
   margin-bottom: 12px;
 }
 
-/* 4 - Rodapé Centralizado (60% da Largura) */
+/* 4 - Rodapé */
 footer {
   width: 100%;
   background-color: #ffffff;

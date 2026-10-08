@@ -1,32 +1,25 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
-    <!-- Configuração de caracteres e tela responsiva -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Descrição para buscadores e autor -->
     <meta
       name="description"
       content="Conheça a história, a missão e os valores da Rio Abaixo Rafting. Nossa equipe é dedicada a oferecer as melhores aventuras de rafting."
     />
     <meta name="author" content="Eduardo David Barbosa Lucena de Veras" />
-
-    <!-- Link para a folha de estilos CSS -->
-    <link rel="stylesheet" href="estilos/raftingg.css" />
-
-    <!-- Título da página -->
     <title>Página Inicial - Rio Abaixo Rafting</title>
+    <link rel="stylesheet" href="estilos/rafting.css" />
   </head>
 
   <body>
-    <!-- Cabeçalho do site -->
+    <!-- Topo -->
     <header>
       <img
         src="imagens/rio-abaixo-nova.jpg"
-        alt="Logotipo Rio Abaixo Rafting"
+        alt="Logotipo da Rio Abaixo Rafting"
+        class="logo"
       />
-
       <nav>
         <ul>
           <li><a href="index.html">Página Inicial</a></li>
@@ -37,72 +30,77 @@
       </nav>
     </header>
 
-    <!-- Conteúdo Principal da Etapa 1 -->
+    <!-- Hero -->
+    <section class="hero-full">
+      <img
+        src="imagens/rafiting-nova.jpg"
+        alt="Pessoas praticando rafting nas corredeiras"
+      />
+    </section>
+
+    <!-- Conteúdo Principal -->
     <main>
-      <!-- Seção Hero Simples -->
-      <section class="hero">
+      <section class="bloco-60">
         <h1>Rio Abaixo Rafting</h1>
-        <img
-          src="imagens/rafiting-nova.jpg"
-          alt="Pessoas praticando rafting nas corredeiras"
-        />
-        <p class="missao-texto">
+        <p class="missao-texto-estatico">
           Nossa missão é gerar emoções inesquecíveis conectando pessoas à
           natureza através de experiências seguras, emocionantes e
           inesquecíveis. Valorizamos a aventura com responsabilidade e respeito
           ao meio ambiente.
         </p>
-      </section>
 
-      <!-- Seção História da Empresa -->
-      <section class="historia">
-        <h2>Nossa História</h2>
-        <p>
-          A Rio Abaixo Rafting começou com um pequeno grupo de apaixonados por
-          rios e esportes ao ar livre. Com o tempo, reunimos guias qualificados,
-          aprimoramos nossos equipamentos e construímos uma reputação baseada em
-          segurança e diversão.
-        </p>
-        <img
-          src="imagens/cliente-feliz.jpg"
-          alt="Cliente sorrindo após o passeio de rafting"
-        />
-        <p>
-          Hoje, recebemos famílias, iniciantes e aventureiros experientes para
-          explorar as melhores rotas de corredeiras da região.
-        </p>
+        <section class="historia">
+          <h2>Nossa História</h2>
+          <div class="historia-conteudo">
+            <p>
+              A Rio Abaixo Rafting começou com um pequeno grupo de apaixonados
+              por rios e esportes ao ar livre. Com o tempo, reunimos guias
+              qualificados, aprimoramos nossos equipamentos e construímos uma
+              reputação baseada em segurança e diversão.
+            </p>
+            <img
+              src="imagens/cliente-feliz.jpg"
+              alt="Cliente sorrindo após o passeio de rafting"
+            />
+            <p>
+              Hoje, recebemos famílias, iniciantes e aventureiros experientes
+              para explorar as melhores rotas de corredeiras da região.
+            </p>
+          </div>
+        </section>
       </section>
     </main>
 
     <!-- Rodapé -->
     <footer>
-      <p>
-        &copy; 2026 Rio Abaixo Rafting | Eduardo David Barbosa Lucena de Veras
-      </p>
-
-      <nav class="socialmedia">
-        <a
-          href="https://facebook.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="imagens/facebook-square.svg" alt="Ícone do Facebook" />
-        </a>
-        <a
-          href="https://linkedin.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="imagens/linkedin-square.svg" alt="Ícone do LinkedIn" />
-        </a>
-        <a
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="imagens/instagram-square.svg" alt="Ícone do Instagram" />
-        </a>
-      </nav>
+      <div class="footer-container">
+        <p>
+          &copy; 2026 Rio Abaixo Rafting | Eduardo David Barbosa Lucena de Veras
+        </p>
+        <nav class="socialmedia">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="imagens/facebook-square.svg" alt="Ícone do Facebook" />
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="imagens/linkedin-square.svg" alt="Ícone do LinkedIn" />
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="imagens/instagram-square.svg" alt="Ícone do Instagram" />
+          </a>
+        </nav>
+      </div>
     </footer>
   </body>
 </html>
