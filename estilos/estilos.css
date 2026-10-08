@@ -32,17 +32,11 @@ footer,
 
 .grid {
   display: grid;
-  align-items: start;
-  grid-template-columns: 20rem 1fr;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-/* Organização principal da página */
-.grid {
-  display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 20px;
+  max-width: 840px;
+  margin: 1rem auto 0 auto;
+  align-items: start;
 }
 
 /* Menu de navegação */
@@ -171,10 +165,10 @@ aside p {
   position: absolute !important;
   top: 10px !important;
   left: 10px !important;
-  background-color: #a0a723;
-  color: #cbe6eb;
+  background-color: var(--cor-de-fundo);
+  color: #ffffff;
   padding: 6px 12px;
-  border-radius: 15px;
+  border-radius: 4px;
   font-size: 0.9rem;
   margin: 0;
   z-index: 10;
@@ -200,7 +194,7 @@ aside p {
 footer {
   width: 100%;
   max-width: 840px;
-  margin: 10 auto;
+  margin: 20px auto 10px auto;
   position: relative;
 }
 

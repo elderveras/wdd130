@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Entre em contato com a equipe da Rio Abaixo Rafting."
+    />
+    <meta name="author" content="Eduardo David Barbosa Lucena de Veras" />
+    <title>Fale Conosco - Rio Abaixo Rafting</title>
+    <link rel="stylesheet" href="estilos/rafiting-teste.css" />
+  </head>
+
+  <body>
+    <!-- Topo com Logo e Menu Centralizado no Espaço Restante -->
+    <header>
+      <img
+        src="imagens/rio-abaixo-nova.jpg"
+        alt="Logotipo da Rio Abaixo Rafting"
+        class="logo"
+      />
+      <nav>
+        <ul>
+          <li><a href="index.html">Página Inicial</a></li>
+          <li><a href="sobre-teste.html">Sobre Nós</a></li>
+          <li><a href="passeios-teste.html">Passeios</a></li>
+          <li><a href="contato-teste.html">Fale Conosco</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero PNG Natural -->
+    <section class="hero-full">
+      <img
+        src="imagens/rafiting-nova.jpg"
+        alt="Bote de rafting nas corredeiras"
+      />
+      <h1>Fale Conosco</h1>
+    </section>
+
+    <!-- Conteúdo 60% -->
+    <main>
+      <section class="bloco-60">
+        <h2>Atendimento e Contato</h2>
+
+        <!-- Grid Principal: Mapa/Endereço Lado a Lado com o Formulário -->
+        <div class="contato-principal-grid">
+          <!-- Coluna Esquerda: Mapa Ampliado e Endereço Abaixo -->
+          <div class="contato-info-coluna">
+            <div class="mapa-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.4132488319693!2d-34.91821032501062!3d-8.059288291968305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18a1f26e25f7%3A0xb308a342419a5840!2sRecife%2C%20PE!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Mapa de localização da Rio Abaixo Rafting"
+              ></iframe>
+            </div>
+            <div class="dados-contato">
+              <p>
+                <strong>Endereço:</strong> Av. das Corredeiras, 1000 - Vale da
+                Aventura, PE
+              </p>
+              <p><strong>Telefone:</strong> (81) 98765-4321 / (81) 3456-7890</p>
+              <p><strong>E-mail:</strong> contato@rioabaixorafting.com.br</p>
+            </div>
+          </div>
+
+          <!-- Coluna Direita: Formulário de Mensagem -->
+          <div class="form-contato-coluna">
+            <form action="#" method="post">
+              <div class="campo">
+                <label for="nome">Nome Completo:</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  required
+                  placeholder="Digite seu nome"
+                />
+              </div>
+              <div class="campo">
+                <label for="email">E-mail:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="seu@email.com"
+                />
+              </div>
+              <fieldset class="campo-radio">
+                <legend>Finalidade da Mensagem:</legend>
+                <label
+                  ><input
+                    type="radio"
+                    name="finalidade"
+                    value="geral"
+                    checked
+                  />
+                  Consulta Geral</label
+                >
+                <label
+                  ><input type="radio" name="finalidade" value="reserva" />
+                  Pergunta sobre Reserva</label
+                >
+                <label
+                  ><input type="radio" name="finalidade" value="sugestao" />
+                  Sugestão de Site</label
+                >
+              </fieldset>
+              <div class="campo">
+                <label for="mensagem">Mensagem:</label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  rows="4"
+                  required
+                  placeholder="Escreva sua mensagem aqui..."
+                ></textarea>
+              </div>
+              <div class="campo-checkbox">
+                <input
+                  type="checkbox"
+                  id="newsletter"
+                  name="newsletter"
+                  value="sim"
+                />
+                <label for="newsletter"
+                  >Quero receber a newsletter mensal</label
+                >
+              </div>
+              <button type="submit" class="btn-garantir">
+                ENVIAR MENSAGEM
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Seção Equipe (Posicionada Abaixo) -->
+        <section class="equipe-secao">
+          <h2>Nossa Equipe</h2>
+          <div class="equipe-grid">
+            <figure>
+              <img src="imagens/carlos-silva.jpg" alt="Foto de Carlos Silva" />
+              <figcaption>
+                <strong>Carlos Silva</strong><br />Guia Chefe
+              </figcaption>
+            </figure>
+            <figure>
+              <img src="imagens/ana-souza.jpg" alt="Foto de Ana Souza" />
+              <figcaption>
+                <strong>Ana Souza</strong><br />Coordenadora de Segurança
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="imagens/mariana-costa.jpg"
+                alt="Foto de Mariana Costa"
+              />
+              <figcaption>
+                <strong>Mariana Costa</strong><br />Gerente de Atendimento
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- Rodapé Ampliado -->
+    <footer>
+      <div class="footer-container">
+        <p>
+          &copy; 2026 Rio Abaixo Rafting | Eduardo David Barbosa Lucena de Veras
+        </p>
+        <nav class="socialmedia">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="imagens/facebook-square.svg" alt="Ícone do Facebook" />
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="imagens/linkedin-square.svg" alt="Ícone do LinkedIn" />
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="imagens/instagram-square.svg" alt="Ícone do Instagram" />
+          </a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

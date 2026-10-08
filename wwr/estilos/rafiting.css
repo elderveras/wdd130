@@ -32,10 +32,15 @@ footer {
 
 /* Cabeçalho do site em duas colunas */
 header {
-  display: grid;
+  display: flex;
+  align-items: center;
   grid-template-columns: 1fr 2fr;
   align-items: center;
   padding: 16px 0;
+  justify-content: space-between;
+  padding: 16px 0;
+  width: 840px;
+  margin: 0 auto;
 }
 
 /* Tamanho da logo */
@@ -47,8 +52,24 @@ header img {
 /* Menu de navegação superior */
 header nav {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
+  padding: 0 16px;
+}
+
+header nav li {
+  margin: 0;
+  padding: 0;
 }
 
 /* Links do menu */
@@ -100,13 +121,10 @@ h2 {
   bottom: 20px;
   left: 20px;
   right: 20px;
-  color: #ffffff;
+  color: var(--cor-destaque1);
   background-color: hsla(0, 0%, 89%, 0.851);
   padding: 12px;
   border-radius: 10px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
 }
 
 .hero article img {
@@ -115,6 +133,7 @@ h2 {
   margin-left: 15px;
   border-radius: 3px;
   flex-shrink: 0;
+  border: 1px solid darkolivegreen;
 }
 
 .hero article p {
@@ -123,6 +142,13 @@ h2 {
   text-align: center;
   padding: 0;
   margin: 0;
+}
+
+.hero-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 section img {
