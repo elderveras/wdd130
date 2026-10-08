@@ -190,12 +190,15 @@ h2 {
   line-height: 1.4;
 }
 
+button,
+button.btn-garantir,
 .btn-passeio,
 .btn-garantir {
   display: inline-block;
   background-color: var(--cor-primaria);
   color: #ffffff;
-  text-decoration: none;
+  font-family: var(--fonte-body);
+  font-size: 1rem;
   font-weight: bold;
   padding: 12px;
   border: none;
@@ -204,6 +207,14 @@ h2 {
   text-align: center;
   transition: background-color 0.2s ease;
   width: 100%;
+}
+
+button:hover,
+button.btn-garantir:hover,
+.btn-passeio:hover,
+.btn-garantir:hover {
+  background-color: var(--cor-secundaria);
+  color: #ffffff;
 }
 
 .btn-passeio:hover,
@@ -340,6 +351,10 @@ footer nav.socialmedia {
 footer nav.socialmedia img {
   width: 32px;
   height: 32px;
+}
+
+form button .btn-garantir {
+  color: white;
 }
 
 @media (max-width: 768px) {
