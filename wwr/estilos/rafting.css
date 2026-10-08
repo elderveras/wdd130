@@ -408,46 +408,56 @@ h2 {
   margin-bottom: 12px;
 }
 
-/* 4 - Rodapé */
+/* 4 - Rodapé Horizontal */
 footer {
   width: 100%;
   background-color: #ffffff;
   border-top: 1px solid #cbd5e1;
-  padding: 30px 0;
+  padding: 24px 0;
   margin-top: 40px;
 }
 
 .footer-container {
-  width: 60%;
+  width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 16px;
+  flex-wrap: nowrap;
 }
 
 footer p {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: bold;
   color: var(--cor-destaque1);
   margin: 0;
-  text-align: center;
+  white-space: nowrap;
 }
 
-footer nav.socialmedia {
+footer nav.redes-sociais {
   display: flex;
-  gap: 28px;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+footer nav.redes-sociais a {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
 
-footer nav.socialmedia img {
-  width: 44px;
-  height: 44px;
+footer nav.redes-sociais img {
+  width: 40px;
+  height: 40px;
+  display: block;
   transition: transform 0.2s ease;
 }
 
-footer nav.socialmedia img:hover {
-  transform: scale(1.1);
+footer nav.redes-sociais img:hover {
+  transform: scale(1.15);
 }
