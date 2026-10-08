@@ -1,260 +1,335 @@
-/* Configuração de cores e fontes do site */
+/* Configurações Globais e Variáveis (Todas as fontes em Arial)*/
 :root {
-  --cor-primaria: #055a05;
-  --cor-secundaria: hsl(27, 97%, 29%);
+  --cor-primaria: darkolivegreen;
+  --cor-secundaria: #3e4f21;
   --cor-destaque1: #264653;
   --cor-destaque2: #e9c46a;
-  --fonte-titulo: "Times New Roman", "Georgia", serif;
+  --fonte-titulo: Arial, Helvetica, sans-serif;
   --fonte-body: Arial, Helvetica, sans-serif;
 }
 
-/* Zerando margens e espaçamentos padrão */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilo geral do corpo da página */
 body {
   font-family: var(--fonte-body);
   color: var(--cor-destaque1);
-  padding: 16px;
+  background-color: #ffffff;
 }
 
-/* Largura fixa e centralização das seções principais */
-header,
-main,
-footer {
-  width: 100%;
-  max-width: 840px;
-  margin: 0 auto;
-}
-
-/* Cabeçalho do site */
+/* 1 - Cabeçalho Personalizado*/
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 0;
-}
-
-/* Tamanho da logo */
-header img,
-header .logo {
-  width: 150px;
-  height: auto;
-}
-
-/* Menu de navegação superior */
-header nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
   width: 100%;
+  background-color: #ffffff;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Logo alinhada à esquerda com margem de 10px */
+header img.logo {
+  width: 160px;
+  height: auto;
+  margin-top: 10px;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+/* Menu distribuído com 15% de margem de cada lado no espaço restante */
+header nav {
+  flex-grow: 1;
+  padding-left: 15%;
+  padding-right: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header nav ul {
   display: flex;
-  list-style: none;
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  list-style: none;
   margin: 0;
-  padding: 0 16px;
+  padding: 0;
 }
 
-/* Links do menu */
 header nav a {
   text-decoration: none;
   color: var(--cor-primaria);
   font-weight: bold;
+  font-size: 1.25rem;
   padding: 8px 12px;
+  transition: color 0.2s ease;
+  white-space: nowrap;
 }
 
 header nav a:hover {
   color: var(--cor-secundaria);
 }
 
-/* Estilo dos títulos */
-h1,
+/* 2 - Hero Section com Fusão Suave*/
+.hero-full {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.hero-full > img {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: cover;
+  display: block;
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 65%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 65%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.hero-full h1 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 800px;
+  padding: 14px 24px;
+  text-align: center;
+  background-color: rgba(38, 70, 83, 0.85);
+  color: #ffffff;
+  font-family: var(--fonte-titulo);
+  font-size: 2.2rem;
+  font-weight: bold;
+  border-radius: 6px;
+  z-index: 2;
+}
+
+/* Caixa de Missão (Página Sobre Nós) */
+.missao-texto {
+  position: absolute;
+  bottom: 110px;
+  right: 20px;
+  width: 380px;
+  padding: 16px 20px;
+  background-color: rgba(245, 245, 245, 0.85);
+  border: 1px solid rgba(200, 200, 200, 0.7);
+  border-radius: 12px;
+  color: darkolivegreen;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  z-index: 3;
+}
+
+/* 3 - Estrutura Principal dos Blocos (60% Largura)*/
+main {
+  width: 100%;
+  padding: 10px 0 60px 0;
+}
+
+.bloco-60 {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
 h2 {
   font-family: var(--fonte-titulo);
   color: var(--cor-primaria);
   text-align: center;
-  margin: 16px 0;
+  margin-bottom: 8px;
+  font-size: 2.2rem;
+  font-weight: bold;
 }
 
-/* Seções Hero (Página Inicial e Geral) */
-.hero,
-.hero-full {
-  position: relative;
-  margin-bottom: 24px;
-}
-
-.hero img,
-.hero-full img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-.hero h1,
-.hero-full h1 {
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  padding: 16px;
-  text-align: center;
-  opacity: 0.85;
-  background-color: var(--cor-destaque1);
-  color: #ffffff;
-  margin: 0;
-}
-
-.missao-texto {
-  background-color: hsla(0, 0%, 89%, 0.851);
-  color: var(--cor-destaque1);
-  padding: 16px;
-  border-radius: 8px;
-  line-height: 1.5;
-  margin-top: 12px;
-  text-align: center;
-}
-
-/* Blocos de Conteúdo */
-.bloco-60,
-.historia {
-  margin: 32px 0;
-}
-
-.historia-conteudo {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 16px;
-  align-items: center;
-}
-
-.historia-conteudo img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-/* Grid de Passeios */
 .subtitulo-passeios {
   text-align: center;
-  margin-bottom: 20px;
-  font-style: italic;
+  color: darkolivegreen;
+  font-weight: bold;
+  font-size: 1.15rem;
+  margin-bottom: 32px;
 }
 
+/* Página Passeios */
 .passeios-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 24px;
+  margin-top: 10px;
 }
 
+/* Card Fixo (Sem animação no hover) */
 .passeio-card {
-  background-color: #f8fafc;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  padding: 16px;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  text-align: center;
+}
+
+.descricao-topo {
+  font-size: 0.95rem;
+  color: darkolivegreen;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .passeio-card img {
   width: 100%;
-  height: 150px;
+  height: 180px;
   object-fit: cover;
-  border-radius: 4px;
-  margin: 12px 0;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.passeio-card h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--cor-primaria);
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
 .preco-card {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: var(--cor-primaria);
-  margin: 8px 0;
+  color: darkolivegreen;
+  margin-bottom: 16px;
 }
 
 .lista-detalhes {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 16px;
-  font-size: 0.9rem;
-  line-height: 1.4;
+  list-style-type: disc;
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 24px;
+  width: 100%;
+  flex-grow: 1;
 }
 
-button,
-button.btn-garantir,
-.btn-passeio,
-.btn-garantir {
-  display: inline-block;
-  background-color: var(--cor-primaria);
+.lista-detalhes li {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--cor-destaque1);
+  margin-bottom: 8px;
+}
+
+/* Apenas o Botão sofre alteração visual no hover */
+.btn-passeio {
+  display: block;
+  width: 100%;
+  background-color: darkolivegreen;
   color: #ffffff;
-  font-family: var(--fonte-body);
   font-size: 1rem;
   font-weight: bold;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
   text-align: center;
-  transition: background-color 0.2s ease;
+}
+
+.btn-passeio:hover {
+  background-color: #3e4f21;
+  transform: translateY(-2px);
+}
+
+/* Página Sobre Nós */
+.historia-conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 24px;
+  align-items: center;
+  text-align: center;
+}
+
+.historia-conteudo img {
   width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-button:hover,
-button.btn-garantir:hover,
-.btn-passeio:hover,
-.btn-garantir:hover {
-  background-color: var(--cor-secundaria);
-  color: #ffffff;
+.historia-conteudo p {
+  line-height: 1.7;
+  font-size: 1.2rem;
+  color: var(--cor-destaque1);
 }
 
-.btn-passeio:hover,
-.btn-garantir:hover {
-  background-color: var(--cor-secundaria);
-}
-
-/* Seção Contato */
+/* Página Fale Conosco */
 .contato-principal-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-bottom: 32px;
+  gap: 32px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+.contato-info-coluna {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .mapa-container iframe {
   width: 100%;
-  height: 250px;
+  height: 320px;
   border: 0;
   border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .dados-contato {
-  margin-top: 16px;
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
 .dados-contato p {
   margin-bottom: 8px;
-  line-height: 1.5;
 }
 
-/* Formulário */
+.dados-contato p:last-child {
+  margin-bottom: 0;
+}
+
 .form-contato-coluna form {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background-color: #f8fafc;
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #cbd5e1;
+  font-size: 1rem;
 }
 
 .campo {
@@ -272,23 +347,18 @@ button.btn-garantir:hover,
 .campo textarea {
   padding: 10px;
   border: 1px solid #cbd5e1;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 1rem;
   font-family: var(--fonte-body);
 }
 
 .campo-radio {
   border: 1px solid #cbd5e1;
-  padding: 12px;
-  border-radius: 4px;
+  padding: 12px 16px;
+  border-radius: 6px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
-
-.campo-radio legend {
-  font-weight: bold;
-  padding: 0 6px;
 }
 
 .campo-checkbox {
@@ -297,9 +367,54 @@ button.btn-garantir:hover,
   gap: 8px;
 }
 
-/* Seção Equipe */
+.btn-enviar {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-enviar:hover {
+  background-color: var(--cor-secundaria);
+}
+
+/* Estilo base do botão */
+.btn-garantir {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: darkolivegreen;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Efeito ao passar o mouse (Hover) e ao focar */
+.btn-garantir:hover,
+.btn-garantir:focus {
+  background-color: darkolivegreen;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Efeito ao clicar (Active) */
+.btn-garantir:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
 .equipe-secao {
-  margin: 32px 0;
+  margin-top: 40px;
 }
 
 .equipe-grid {
@@ -311,69 +426,59 @@ button.btn-garantir:hover,
 .equipe-grid figure {
   text-align: center;
   background-color: #f8fafc;
-  padding: 16px;
+  padding: 20px;
   border-radius: 8px;
   border: 1px solid #cbd5e1;
 }
 
 .equipe-grid img {
-  width: 140px;
-  height: 140px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 12px;
 }
 
-.equipe-grid figcaption {
-  font-size: 0.95rem;
-  color: var(--cor-destaque1);
-  line-height: 1.4;
-}
-
-/* Rodapé */
+/* 4 - Rodapé Centralizado (60% da Largura) */
 footer {
-  border-top: 1px solid var(--cor-destaque1);
-  padding: 16px 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #cbd5e1;
+  padding: 30px 0;
   margin-top: 40px;
 }
 
 .footer-container {
+  width: 60%;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+footer p {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--cor-destaque1);
+  margin: 0;
+  text-align: center;
 }
 
 footer nav.socialmedia {
   display: flex;
-  gap: 15px;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
 }
 
 footer nav.socialmedia img {
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
+  transition: transform 0.2s ease;
 }
 
-form button .btn-garantir {
-  color: white;
-}
-
-@media (max-width: 768px) {
-  header,
-  .footer-container {
-    flex-direction: column;
-    gap: 16px;
-    text-align: center;
-  }
-
-  header nav ul {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .historia-conteudo,
-  .passeios-grid,
-  .contato-principal-grid,
-  .equipe-grid {
-    grid-template-columns: 1fr;
-  }
+footer nav.socialmedia img:hover {
+  transform: scale(1.1);
 }
