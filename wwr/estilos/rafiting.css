@@ -26,25 +26,22 @@ body {
 header,
 main,
 footer {
-  width: 840px;
+  width: 100%;
+  max-width: 840px;
   margin: 0 auto;
 }
 
-/* Cabeçalho do site em duas colunas */
+/* Cabeçalho do site */
 header {
   display: flex;
   align-items: center;
-  grid-template-columns: 1fr 2fr;
-  align-items: center;
-  padding: 16px 0;
   justify-content: space-between;
   padding: 16px 0;
-  width: 840px;
-  margin: 0 auto;
 }
 
 /* Tamanho da logo */
-header img {
+header img,
+header .logo {
   width: 150px;
   height: auto;
 }
@@ -67,11 +64,6 @@ header nav ul {
   padding: 0 16px;
 }
 
-header nav li {
-  margin: 0;
-  padding: 0;
-}
-
 /* Links do menu */
 header nav a {
   text-decoration: none;
@@ -80,12 +72,11 @@ header nav a {
   padding: 8px 12px;
 }
 
-/* Mudar cor do link ao passar o mouse */
 header nav a:hover {
   color: var(--cor-secundaria);
 }
 
-/* Estilo dos títulos h1 e h2 */
+/* Estilo dos títulos */
 h1,
 h2 {
   font-family: var(--fonte-titulo);
@@ -94,73 +85,48 @@ h2 {
   margin: 16px 0;
 }
 
-/* Estilos de páginas anteriores (Página Inicial) */
-.hero {
+/* Seções Hero (Página Inicial e Geral) */
+.hero,
+.hero-full {
   position: relative;
+  margin-bottom: 24px;
 }
 
-.hero img {
+.hero img,
+.hero-full img {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 6px;
 }
 
-.hero h1 {
+.hero h1,
+.hero-full h1 {
   position: absolute;
   top: 20px;
   width: 100%;
   padding: 16px;
   text-align: center;
-  opacity: 0.7;
+  opacity: 0.85;
   background-color: var(--cor-destaque1);
   color: #ffffff;
-}
-
-.hero article {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  color: var(--cor-destaque1);
-  background-color: hsla(0, 0%, 89%, 0.851);
-  padding: 12px;
-  border-radius: 10px;
-}
-
-.hero article img {
-  width: 125px;
-  height: auto;
-  margin-left: 15px;
-  border-radius: 3px;
-  flex-shrink: 0;
-  border: 1px solid darkolivegreen;
-}
-
-.hero article p {
-  color: var(--cor-destaque1);
-  line-height: 1.5;
-  text-align: center;
-  padding: 0;
   margin: 0;
 }
 
-.hero-conteudo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+.missao-texto {
+  background-color: hsla(0, 0%, 89%, 0.851);
+  color: var(--cor-destaque1);
+  padding: 16px;
+  border-radius: 8px;
+  line-height: 1.5;
+  margin-top: 12px;
+  text-align: center;
 }
 
-section img {
-  width: 100%;
-}
-
+/* Blocos de Conteúdo */
+.bloco-60,
 .historia {
   margin: 32px 0;
-}
-
-.historia h2 {
-  margin-bottom: 16px;
 }
 
 .historia-conteudo {
@@ -170,159 +136,116 @@ section img {
   align-items: center;
 }
 
-.historia img {
+.historia-conteudo img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 5px;
 }
 
-.aventura {
-  margin: 32px 0;
+/* Grid de Passeios */
+.subtitulo-passeios {
+  text-align: center;
+  margin-bottom: 20px;
+  font-style: italic;
 }
 
-.galeria-aventura {
+.passeios-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
-  margin-top: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.galeria-aventura img {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-.galeria-aventura figure {
-  margin: 0;
-  padding: 0;
+.passeio-card {
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
 }
 
-.galeria-aventura figcaption {
-  font-size: 0.85rem;
-  margin-top: 6px;
-  color: var(--cor-destaque1);
+.passeio-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin: 12px 0;
 }
 
-/* Rodapé do site */
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid var(--cor-destaque1);
-  padding: 16px 0;
-  margin: 40px auto;
+.preco-card {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--cor-primaria);
+  margin: 8px 0;
 }
 
-footer p {
+.lista-detalhes {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
   font-size: 0.9rem;
-  margin: 0;
-  padding: 0;
+  line-height: 1.4;
 }
 
-/* Ícones de redes sociais no rodapé */
-footer nav.socialmedia {
-  display: flex;
-  gap: 15px;
-  margin: 0;
-  padding: 0;
-}
-
-footer nav.socialmedia a {
+.btn-passeio,
+.btn-garantir {
+  display: inline-block;
+  background-color: var(--cor-primaria);
+  color: #ffffff;
   text-decoration: none;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease;
+  width: 100%;
 }
 
-footer nav.socialmedia img {
-  width: 32px;
-  height: 32px;
+.btn-passeio:hover,
+.btn-garantir:hover {
+  background-color: var(--cor-secundaria);
 }
 
-/* Seção de informações e mapa em duas colunas */
-.informacoes-empresa {
-  margin: 32px 0;
-}
-
-.empresa-grid {
+/* Seção Contato */
+.contato-principal-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.mapa-container iframe {
+  width: 100%;
+  height: 250px;
+  border: 0;
+  border-radius: 8px;
+}
+
+.dados-contato {
+  margin-top: 16px;
+}
+
+.dados-contato p {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* Formulário */
+.form-contato-coluna form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   background-color: #f8fafc;
   padding: 20px;
   border-radius: 8px;
   border: 1px solid #cbd5e1;
 }
 
-.dados-contato p {
-  margin-bottom: 12px;
-  line-height: 1.6;
-}
-
-/* Ajuste do mapa para ocupar todo o container */
-.mapa-container iframe {
-  width: 100%;
-  border: 0;
-  border-radius: 8px;
-}
-
-/* Seção dos funcionários em três colunas */
-.equipe {
-  margin: 32px 0;
-}
-
-.equipe-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-/* Cartão individual do funcionário */
-.equipe-grid figure {
-  text-align: center;
-  background-color: #f8fafc;
-  padding: 16px;
-  border-radius: 8px;
-  border: 1px solid #cbd5e1;
-  margin: 0;
-}
-
-/* Fotos redondas dos funcionários */
-.equipe-grid img {
-  width: 100%;
-  max-width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 12px;
-}
-
-.equipe-grid figcaption {
-  font-size: 0.95rem;
-  color: var(--cor-destaque1);
-  line-height: 1.4;
-}
-
-/* Caixa do formulário de contato */
-.formulario-secao {
-  background-color: #f8fafc;
-  padding: 24px;
-  border-radius: 8px;
-  border: 1px solid #cbd5e1;
-  margin: 32px 0;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Campos de texto do formulário */
 .campo {
   display: flex;
   flex-direction: column;
@@ -343,10 +266,9 @@ form {
   font-family: var(--fonte-body);
 }
 
-/* Caixa das opções de seleção (radio) */
 .campo-radio {
   border: 1px solid #cbd5e1;
-  padding: 12px 16px;
+  padding: 12px;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -358,32 +280,85 @@ form {
   padding: 0 6px;
 }
 
-.campo-radio label {
-  font-weight: normal;
-  cursor: pointer;
-}
-
-/* Opção de caixa de seleção (checkbox) */
 .campo-checkbox {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-/* Botão de envio do formulário */
-.btn-enviar {
-  background-color: var(--cor-primaria);
-  color: #ffffff;
-  font-size: 1.1rem;
-  font-weight: bold;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+/* Seção Equipe */
+.equipe-secao {
+  margin: 32px 0;
 }
 
-/* Efeito ao passar o mouse sobre o botão */
-.btn-enviar:hover {
-  background-color: var(--cor-secundaria);
+.equipe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.equipe-grid figure {
+  text-align: center;
+  background-color: #f8fafc;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}
+
+.equipe-grid img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.equipe-grid figcaption {
+  font-size: 0.95rem;
+  color: var(--cor-destaque1);
+  line-height: 1.4;
+}
+
+/* Rodapé */
+footer {
+  border-top: 1px solid var(--cor-destaque1);
+  padding: 16px 0;
+  margin-top: 40px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer nav.socialmedia {
+  display: flex;
+  gap: 15px;
+}
+
+footer nav.socialmedia img {
+  width: 32px;
+  height: 32px;
+}
+
+@media (max-width: 768px) {
+  header,
+  .footer-container {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .historia-conteudo,
+  .passeios-grid,
+  .contato-principal-grid,
+  .equipe-grid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,6 +1,4 @@
-/* ===================================================
-   Configurações Globais e Variáveis (Todas as fontes em Arial)
-   =================================================== */
+/* Configurações Globais e Variáveis (Todas as fontes em Arial)*/
 :root {
   --cor-primaria: darkolivegreen;
   --cor-secundaria: #3e4f21;
@@ -22,9 +20,7 @@ body {
   background-color: #ffffff;
 }
 
-/* ===================================================
-   1. Cabeçalho Personalizado
-   =================================================== */
+/* 1 - Cabeçalho Personalizado*/
 header {
   width: 100%;
   background-color: #ffffff;
@@ -77,9 +73,7 @@ header nav a:hover {
   color: var(--cor-secundaria);
 }
 
-/* ===================================================
-   2. Hero Section com Fusão Suave
-   =================================================== */
+/* 2 - Hero Section com Fusão Suave*/
 .hero-full {
   width: 100%;
   position: relative;
@@ -144,9 +138,7 @@ header nav a:hover {
   z-index: 3;
 }
 
-/* ===================================================
-   3. Estrutura Principal dos Blocos (60% Largura)
-   =================================================== */
+/* 3 - Estrutura Principal dos Blocos (60% Largura)*/
 main {
   width: 100%;
   padding: 10px 0 60px 0;
@@ -395,11 +387,10 @@ h2 {
 .btn-garantir {
   display: inline-block;
   padding: 14px 28px;
-  background-color: darkolivegreen; /* Ajuste para a cor de fundo exata do seu tema */
-  color: #ffffff;
+  background-color: darkolivegreen;
   font-size: 1rem;
   font-weight: 700;
-  text-transform: uppercase; /* Força todas as letras a ficarem maiúsculas */
+  text-transform: uppercase;
   text-align: center;
   border: none;
   border-radius: 8px;
@@ -411,8 +402,8 @@ h2 {
 /* Efeito ao passar o mouse (Hover) e ao focar */
 .btn-garantir:hover,
 .btn-garantir:focus {
-  background-color: darkolivegreen; /* Cor ao passar o mouse */
-  transform: translateY(-2px); /* Efeito de elevação */
+  background-color: darkolivegreen;
+  transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
@@ -448,9 +439,7 @@ h2 {
   margin-bottom: 12px;
 }
 
-/* ===================================================
-   4. Rodapé Centralizado (60% da Largura)
-   =================================================== */
+/* 4 - Rodapé Centralizado (60% da Largura) */
 footer {
   width: 100%;
   background-color: #ffffff;
